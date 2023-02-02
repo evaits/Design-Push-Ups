@@ -1,0 +1,102 @@
+/* container */
+.container {
+    padding-left: 27px;
+    padding-right: 27px;
+}
+
+.header {
+    background-color: #F7F7F7;
+    font-family: 'Poppins', sans-serif;
+    padding: 25px 0px 35px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sub-title {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 18px;
+    color: #ADA4A5;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.header-title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 30px;
+    color: #1D1617;
+}
+
+.icon {
+    position: absolute;
+    width: 131px;
+    height: 87px;
+    background: rgba(135, 183, 255, 0.18);
+    background-image: url(/img/header-ico.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 38px;
+    right: -24px;
+    top: 15px;
+}
+
+/* Main */
+.main {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Stat */
+.today-stat {
+    background-image: url(/img/today-stat.png);
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    background-position: center;
+    height: 99px;
+    width: 83vw;
+    margin-top: 27px;
+    margin-bottom: 25px;
+    padding-top: 8px;
+}
+
+.today-stat-title {
+    font-weight: 400;
+    font-size: 19px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.stat {
+    display: flex;
+    padding-left: 26px;
+}
+
+.repeats-block,
+.approach-block,
+.average-block {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: rgba(255, 255, 255, 0.48);
+}
+
+.repeats-block,
+.approach-block {
+    margin-right: 42px;
+}
+
+.repeats,
+.approach,
+.average {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 21px;
+    color: #FFFFFF;
+    margin-top: 12px;
+}
+
+/* Daily Goal */

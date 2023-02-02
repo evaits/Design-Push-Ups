@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+    <link rel="stylesheet" href="css/style-reset.css">
+    <link rel="stylesheet" href="css/edit.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic. com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Edit Push Up</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">
+            Edit
+        </h1>
+    </header>
+    <main class="main">
+        <ul class="list" id="list">
+            
+        </ul>
+    </main>
+    <footer class="footer">
+        <a href="index.html" class="back">
+            Back
+        </a>
+    </footer>
+
+    <div class="modal" id="MyModal">
+        <div class="modal-content">
+            <h2 class="modal-title">
+                Add new
+            </h2>
+            <form id="form">
+                <input type="number" name="inp" class="input" id="much" min="1"><br>
+                <button type="button" id="btn-save">Save</button>
+            </form>
+
+            <button id="btn-close" onclick="close_modal()">
+                Close
+            </button>
+        </div>
+    </div>   
+
+
+    <script src="script/jquery-3.6.3.min.js"></script>
+    <script src="script/edit.js"></script>
+    <script src="script/edit_jq.js"></script>
+</body>
+</html>
