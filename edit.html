@@ -4,53 +4,129 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
     <link rel="stylesheet" href="css/style-reset.css">
     <link rel="stylesheet" href="css/edit.css">
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic. com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <title>Edit Push Up</title>
+    <link rel="shortcut icon" href="img/header-ico.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Push Up</title>
 </head>
 <body>
     <header class="header">
-        <h1 class="title">
-            Edit
-        </h1>
+        <div class="titles">
+            <h6 class="sub-title">
+                History of
+            </h6>
+            <h1 class="header-title">
+                Activity
+            </h1>
+        </div>
+        <div class="icon">
+        </div>
     </header>
     <main class="main">
-        <ul class="list" id="list">
-            
-        </ul>
-    </main>
-    <footer class="footer">
-        <a href="index.html" class="back">
-            Back
-        </a>
-    </footer>
-
-    <div class="modal" id="MyModal">
-        <div class="modal-content">
-            <h2 class="modal-title">
-                Add new
-            </h2>
-            <form id="form">
-                <input type="number" name="inp" class="input" id="much" min="1"><br>
-                <button type="button" id="btn-save">Save</button>
-            </form>
-
-            <button id="btn-close" onclick="close_modal()">
-                Close
-            </button>
+        <div class="container">
+            <div class="blocks">
+                <div class="block">
+                    <div class="left-info">
+                        <h6 class="date">02.02</h6>
+                        <div class="repeats">
+                            96 <span>REPEATS</span>
+                        </div>
+                    </div>
+                    <div class="right-info">
+                        <div class="dots">
+                            ...
+                        </div><br>
+                        <div class="percent">
+                            +0,7%
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="left-info">
+                        <h6 class="date">02.02</h6>
+                        <div class="repeats">
+                            96 <span>REPEATS</span>
+                        </div>
+                    </div>
+                    <div class="right-info">
+                        <div class="dots">
+                            ...
+                        </div><br>
+                        <div class="percent">
+                            +0,7%
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="left-info">
+                        <h6 class="date">02.02</h6>
+                        <div class="repeats">
+                            96 <span>REPEATS</span>
+                        </div>
+                    </div>
+                    <div class="right-info">
+                        <div class="dots">
+                            ...
+                        </div><br>
+                        <div class="percent">
+                            +0,7%
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="left-info">
+                        <h6 class="date">02.02</h6>
+                        <div class="repeats">
+                            96 <span>REPEATS</span>
+                        </div>
+                    </div>
+                    <div class="right-info">
+                        <div class="dots">
+                            ...
+                        </div><br>
+                        <div class="percent">
+                            +0,7%
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="left-info">
+                        <h6 class="date">02.02</h6>
+                        <div class="repeats">
+                            96 <span>REPEATS</span>
+                        </div>
+                    </div>
+                    <div class="right-info">
+                        <div class="dots">
+                            ...
+                        </div><br>
+                        <div class="percent">
+                            +0,7%
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>   
+    </main>
 
-
-    <script src="script/jquery-3.6.3.min.js"></script>
-    <script src="script/edit.js"></script>
-    <script src="script/edit_jq.js"></script>
+    <div class="navbar">
+        <a href="index.html" class="home-link"><img src="img/Navbar/Home.png" alt="home" class="home-ico"></a>
+        <a href="index.html" class="stat-link"><img src="img/statistic-img.png" alt="stat" class="stat-ico"></a>
+        <div class="add" onclick="open_modal()">
+            <img src="img/+.png" alt="plus" class="plus">
+        </div>
+        <a href="edit.html" class="edit-link">
+            <img src="img/Navbar/Edit.png" alt="edit" class="edit-ico">
+        </a>
+        <a href="#!" class="profile-link">
+            <img src="img/Profile-ico.png" alt="profile" class="profile-ico">
+        </a>
+    </div>
 </body>
 </html>
