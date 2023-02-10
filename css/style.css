@@ -461,7 +461,7 @@ body {
 
                 /* Modal */
 .modal-bg {
-    /* display: none; */
+    display: none;
     position: absolute;
     top: 120px;
     background-color: rgba(0, 42, 255, 0.203);
