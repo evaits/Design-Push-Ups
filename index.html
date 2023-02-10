@@ -124,11 +124,54 @@
                 </div>
             </div>
         </div>
+                    <!-- MODAL -->
+        <div class="modal-bg">
+            <div class="modal">
+                <img src="img/modal-icon.png" alt="ico" class="modal-icon">
+                <h3 class="modal-title">New approach</h3>
+                    <!-- Select -->
+                
+                <details class="custom-select">
+                    <summary class="radios">
+                        <input type="radio" name="item" id="default" title="0" checked>
+                        <input type="radio" name="item" id="item1" title="1">
+                        <input type="radio" name="item" id="item2" title="2">
+                        <input type="radio" name="item" id="item3" title="3">
+                        <input type="radio" name="item" id="item4" title="4">
+                        <input type="radio" name="item" id="item5" title="5">
+                    </summary>
+                    <ul class="list">
+                        <li>
+                            <label for="item1">
+                                1
+                                <span></span>
+                            </label>
+                        </li>
+                        <li>
+                            <label for="item2">2</label>
+                        </li>
+                        <li>
+                            <label for="item3">3</label>
+                        </li>
+                        <li>
+                            <label for="item4">4</label>
+                        </li>
+                        <li>
+                            <label for="item5">5</label>
+                        </li>
+                    </ul>
+                </details>
+
+                <div class="agree">
+                    <img src="img/agree-icon.png" alt="agree" class="agree-icon">
+                </div>
+            </div>
+        </div>
     </main>
     <div class="navbar">
         <img src="img/home-ico.png" alt="home" class="home-ico">
         <a href="#!" class="stat-link"><img src="img/statistic-img.png" alt="stat" class="stat-ico"></a>
-        <div class="add">
+        <div class="add" onclick="open_modal()">
             <img src="img/+.png" alt="plus" class="plus">
         </div>
         <a href="#!" class="edit-link">
@@ -138,9 +181,6 @@
             <img src="img/Profile-ico.png" alt="profile" class="profile-ico">
         </a>
     </div>
-
-    <!-- MODAL -->
-
 
     <script src="script/main.js"></script>
     
