@@ -35,3 +35,20 @@ function animateCloseModal() {
         plus.style.transform = 'rotate(0)';
       });
 }
+
+// Save data
+function item(digit) {
+  let item_id = digit
+  window.item_global = item_id;
+}
+
+function save_data() {
+  let item_id = window.item_global;
+  if(item_id==undefined) {
+    item_id = 1
+  }
+  console.log(item_id)
+  animateCloseModal()
+  document.querySelector('.modal-bg').style.display = 'none'
+  location=location
+}

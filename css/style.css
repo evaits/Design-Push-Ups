@@ -412,8 +412,12 @@ body {
     padding-left: 30px;
 }
 
-.home-ico {
+.home-link {
     margin-right: 35px;
+    pointer-events: none;
+}
+
+.home-ico {
     width: 30px;
     height: 33px;
 }
