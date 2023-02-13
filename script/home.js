@@ -55,12 +55,77 @@ ms.sort((a, b) => b - a);
 
 const date = []
 for(let i = 0; i<ms.length; i++){
-  date.push(Intl.DateTimeFormat('en-GB').format(ms[i]))
+  date.push(Intl.DateTimeFormat('en-US').format(ms[i]))
 }
-console.log(date)
+
 
 
         // Print Activity Progress
-if(localStorage.length-2 > 0){
+if(date.length > 0){
   let blocks = document.querySelector('.activity-blocks')
+  
+  // Add tags
+  let block; // div | class - block
+  let date_html; // p
+  let number_repeats; //div | class - number_repeats;
+  let repeats_p; // p
+  let img; // img | class - block-vector
+
+  for(let i = 0; i<date.length && i<4; i++){
+
+    // Create tags
+    block = document.createElement('div')
+    date_html = document.createElement('p')
+    repeats_div = document.createElement('div')
+    number_repeats = document.createElement('div')
+    repeats_p = document.createElement('p')
+    img = document.createElement('img')
+    
+
+    // Add Class Name
+    block.className = 'block'
+    repeats_div.className = 'repeats'
+    number_repeats.className = 'number-repeats'
+    img.className = 'block-vector'
+
+    // Get date from Local Storage
+    date_localStorage = date[i]
+
+    // Reform date
+    reform_date = date_localStorage.slice(0,4)
+    reform_date = reform_date.replace('/', '.')
+    if(reform_date.length == 4){
+      reform_date = '0' + reform_date
+    }
+    reform_date = reform_date[3]+reform_date[4] + reform_date[2] + reform_date[0] + reform_date[1]
+
+    // Add context
+    date_html.innerHTML = reform_date
+    number_repeats.innerHTML = localStorage.getItem(date_localStorage)
+    repeats_p.innerHTML = 'repeats'
+
+    img.setAttribute('src', 'img/activity-img.png')
+
+    // Add in site
+    blocks.append(block)
+    block.append(date_html)
+    block.append(repeats_div)
+    repeats_div.append(number_repeats)
+    repeats_div.append(repeats_p)
+    block.append(img)
+  }
+}
+
+
+// If date.length = 0
+else{
+  let blocks = document.querySelector('.activity-blocks')
+  blocks.style.display = 'block'
+
+
+  let p = document.createElement('p')
+  p.className = 'lack'
+  p.innerHTML = "It's your first day"
+
+  blocks.append(p)
 }

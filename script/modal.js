@@ -73,8 +73,10 @@ function save_data() {
 
 // Save Date
 let today = new Date()
-today = Intl.DateTimeFormat('en-GB').format(today)
-today = today.slice(0, 10)
+
+today = Date.parse(today)
+today = new Date(today).toLocaleString('en-US')
+today = today.slice(0, 9)
 if(localStorage.getItem("today") == null){
   localStorage.setItem("today", today)
 }
@@ -101,7 +103,3 @@ if(localStorage_date !== today){
   localStorage.removeItem("arr")
   location = location
 }
-
-
-
-
