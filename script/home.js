@@ -28,7 +28,7 @@ average.innerHTML = Math.round(sum/arr.length) + '/ap'
 
 
 // Daily goal
-let daily_percent = sum/100*100+'%'
+let daily_percent = Math.round(sum/100*100)+'%'
 if(sum<=100){
   document.querySelector('.percent').innerHTML = daily_percent
   document.querySelector('.done').style.width = daily_percent
@@ -104,7 +104,7 @@ if(date.length > 0){
     number_repeats.innerHTML = localStorage.getItem(date_localStorage)
     repeats_p.innerHTML = 'repeats'
 
-    img.setAttribute('src', 'img/activity-img.png')
+    img.setAttribute('src', 'img/Home/activity-img.png')
 
     // Add in site
     blocks.append(block)

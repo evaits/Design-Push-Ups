@@ -193,8 +193,9 @@ body {
 
 /* Stat */
 .today-stat {
-    background-image: url(../img/today-stat.png);
+    background-image: url(../img/Home/today-stat.png);
     background-repeat: no-repeat;
+    background-size: 470px;
     margin-left: auto;
     margin-right: auto;
     background-position: center;
@@ -202,6 +203,7 @@ body {
     width: 83vw;
     margin-top: 27px;
     margin-bottom: 25px;
+    border-radius: 22px;
     padding-top: 8px;
 }
 
