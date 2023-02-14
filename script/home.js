@@ -48,7 +48,6 @@ for(let i = 0; i<localStorage.length; i++){
   }
 
   ms.push(Date.parse(localStorage.key(i)))
-  
 }
 
 ms.sort((a, b) => b - a);
@@ -103,7 +102,6 @@ if(date.length > 0){
     date_html.innerHTML = reform_date
     number_repeats.innerHTML = localStorage.getItem(date_localStorage)
     repeats_p.innerHTML = 'repeats'
-
     img.setAttribute('src', 'img/Home/activity-img.png')
 
     // Add in site
