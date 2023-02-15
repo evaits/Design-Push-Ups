@@ -43,6 +43,7 @@ if(date.length > 0){
     span = document.createElement('span')
     right_info = document.createElement('div')
     dots = document.createElement('div')
+    btn_delete = document.createElement('div')
     percent = document.createElement('div')
 
     // Add Class Name
@@ -52,6 +53,7 @@ if(date.length > 0){
     repeats.className = 'repeats'
     right_info.className = 'right-info'
     dots.className = 'dots'
+    btn_delete.className = 'delete delete-'+i
     percent.className = 'percent'
 
     // Get date from Local Storage
@@ -70,6 +72,8 @@ if(date.length > 0){
     repeats.innerHTML = localStorage.getItem(date_localStorage);
     span.innerHTML = 'REPEATS';
     dots.innerHTML = '...';
+    btn_delete.innerHTML = 'Delete';
+    dots.setAttribute('onclick', 'open_delete('+ i +')')
 
     // Percent settings
     localStorage.getItem(date_localStorage) >= 100 ? percent.innerHTML = 'Done' : percent.innerHTML = 'Sick';
@@ -83,8 +87,42 @@ if(date.length > 0){
     repeats.append(span)
     block.append(right_info)
     right_info.append(dots)
+    dots.append(btn_delete)
     right_info.append(br)
     right_info.append(percent)
+
   }
 
 }
+
+// Delete
+function open_delete(count) {
+  let btn = document.querySelector('.delete-'+count)
+  btn.style.display = 'block'
+  btn.setAttribute('onclick', 'delete_fun()')
+  var count = count
+  window.globalVar = count
+}
+
+function delete_fun() {
+    let count = globalVar
+    let delete_ask = confirm('Are you sure?')
+    if(delete_ask){
+        let key = date[count]
+        localStorage.removeItem(key)
+        location = location
+    }
+}
+
+// Jquery click outside btn
+$(document).ready(function () {
+    $(document).mouseup( function(e){ // событие клика по веб-документу
+		var delete_btn = $('.delete')
+        var div = $( ".dots" ); // тут указываем ID элемента
+		if ( !div.is(e.target) // если клик был не по нашему блоку
+		    && div.has(e.target).length === 0 ) { // и не по его дочерним элементам
+			delete_btn.hide(); // скрываем его
+		}
+	});
+});
+	

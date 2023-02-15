@@ -238,9 +238,24 @@ body {
 }
 
 .dots {
+    position: relative;
 	color: #979797;
 	font-size: 20px;
 	margin-left: 0px;
+}
+
+.delete {
+    display: none;
+    position: absolute;
+    top: 5px;
+    background: #5DC5FF;
+    border-radius: 9px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    color: #FFFFFF;
+    padding: 6px 12px;
 }
 
 .percent {
@@ -270,11 +285,16 @@ body {
 .home-link {
     margin-right: 35px;
 	margin-top: 1px;
+    height: 24px;
 }
 
 .home-ico {
     width: 24px;
     height: 25px;
+}
+
+.stat-link {
+    height: 29px;
 }
 
 .stat-ico {
@@ -310,6 +330,7 @@ body {
 
 .profile-link {
     margin-left: 35px;
+    height: 28px;
 }
 
 .profile-ico {

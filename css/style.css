@@ -431,6 +431,10 @@ body {
     height: 33px;
 }
 
+.stat-link {
+    height: 29px;
+}
+
 .stat-ico {
     width: 29px;
     height: 29px;
@@ -454,6 +458,7 @@ body {
 
 .edit-link {
     margin-left: 117px;
+    height: 24px;
 }
 
 .edit-ico {
@@ -463,6 +468,7 @@ body {
 
 .profile-link {
     margin-left: 35px;
+    height: 28px;
 }
 
 .profile-ico {
