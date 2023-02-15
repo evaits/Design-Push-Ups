@@ -176,8 +176,61 @@ if(arr[0] !== 0) {
     }
 
 }
+// If arr = []
+else{
+    let main = document.querySelector('.main')
+    let p = document.createElement('p')
+    p.className = 'lack'
+    p.innerHTML = "No more approach today."
+    main.append(p)
+}
 
+// Edit
 function edit_modal(count) {
+    // Styles
     document.querySelector('.modal-bg-edit').style.display = 'block'
-    document.querySelector('.modal-title').innerHTML = count + ' Approach'
+    let title = document.querySelector('.modal-title-edit').innerHTML = count+1 + ' Approach'
+    btn.innerHTML = 'Close'
+    btn.setAttribute('onclick', 'close_editModal()')
+    footer.style.background = 'rgba(0, 42, 255, 0.20)'
+    document.querySelector('.input').setAttribute('placeholder', arr[count])
+    // Send var
+    var count = count
+    window.globalVar = count
+}
+
+function close_editModal() {
+    document.querySelector('.modal-bg-edit').style.display = 'none'
+    btn.innerHTML = 'New'
+    btn.setAttribute('onclick', 'open_modal()')
+    footer.style.background = ''
+}
+
+// Delete function
+function delete_data() {
+    let count = window.globalVar
+    arr.splice(count, 1)
+    localStorage.setItem('arr', arr)
+    // Style
+    document.querySelector('.modal-bg-edit').style.display = 'none'
+    btn.innerHTML = 'New'
+    btn.setAttribute('onclick', 'open_modal()')
+    footer.style.background = ''
+
+    location = location
+}
+
+// Save changes
+function save_changes() {
+    let input = document.querySelector('.input').value
+    if (input == ''){
+        alert('Error')
+    } 
+    else {
+        let count = window.globalVar
+        arr[count] = Number(input)
+        localStorage.setItem('arr', arr)
+        close_editModal()
+        location=location
+    }
 }
