@@ -152,6 +152,7 @@ if(arr[0] !== 0) {
         // Add context
         top.innerHTML = i+1 + ' approach'
         edit.setAttribute('src', 'img/today-approaches/edit.png')
+        edit.setAttribute('onclick', 'edit_modal('+ i +')')
         motivation_img.setAttribute('src', 'img/today-approaches/motivation.png')
         left_text.innerHTML = 'You could'
         left_state.innerHTML = 'Good'
@@ -174,4 +175,9 @@ if(arr[0] !== 0) {
         right_text.prepend(right_state)
     }
 
+}
+
+function edit_modal(count) {
+    document.querySelector('.modal-bg-edit').style.display = 'block'
+    document.querySelector('.modal-title').innerHTML = count + ' Approach'
 }
