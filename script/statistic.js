@@ -35,7 +35,7 @@ let data = []
 for(let i = 0; i<labels.length; i++){
     data.push(localStorage.getItem(date[i]))
 }
-console.log(data)
+
 
 // Graf
 var ctx = document.querySelector('.graf');
@@ -52,7 +52,8 @@ var myChart = new Chart(ctx, {
             fontcolor: 'white',
             cubicInterpolationMode: 'monotone',
             borderWidth: 2,
-            
+            pointHitRadius: 20,
+            pointBorderColor: 'white',
         }]
     },
     options: {
@@ -61,13 +62,14 @@ var myChart = new Chart(ctx, {
               beginAtZero: true,
               grid: {
                 color: 'white'
-              }
+              },
             },
             x: {
                 grid: {
                   display: false
                 }
             },
+            
         },
         elements: {
             point:{
@@ -88,8 +90,8 @@ var myChart = new Chart(ctx, {
                 titleFont: {weight: '400'},
                 bodyColor: '#7B6F72',
                 backgroundColor: '#FFFFFF',
-                
-            }
+            },
+            
         },
         
     }
