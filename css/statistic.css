@@ -1,0 +1,38 @@
+/* Header */
+.header {
+    padding-top: 25px;
+    padding-right: 24px;
+    padding-left: 24px;
+    padding-bottom: 20px;
+    background: linear-gradient(274.42deg, #92A3FD 0%, #9DCEFF 124.45%);
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.back {
+    width: 42px;
+    height: 42px;
+}
+
+.dots {
+    width: 42px;
+    height: 42px;
+}
+
+.title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    margin-top: 8px;
+}
+
+.main {
+    background: linear-gradient(274.42deg, #92A3FD 0%, #9DCEFF 124.45%);
+}
