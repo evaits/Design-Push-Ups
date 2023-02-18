@@ -2,7 +2,7 @@
 let ms = []
 
 for(let i = 0; i<localStorage.length; i++){
-  if((localStorage.key(i)=='arr') || (localStorage.key(i) == "today")){
+  if((localStorage.key(i)=='arr') || (localStorage.key(i) == "today") || (localStorage.key(i) == 'best')){
       continue
   }
 
@@ -32,7 +32,7 @@ if(date.length > 0){
   let percent; // div | percent
 
 
-  for(let i = 0; i<date.length && i<4; i++){
+  for(let i = 0; i<date.length; i++){
 
     // Create tags
     block = document.createElement('div')

@@ -49,6 +49,9 @@ function save_data() {
     item_id = 1
   }
 
+  // Work with best
+  let best = localStorage.getItem('best')
+  item_id > Number(best) && localStorage.setItem('best', item_id)
 
   // Work with arr and Local Storage
   let arr = []

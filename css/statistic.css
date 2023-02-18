@@ -273,28 +273,29 @@ label span {
     /* padding-top: 24px; */
     padding-top: 27px;
     padding-bottom: 27px;
-    padding-bottom: 24px;
+    padding-bottom: 28px;
     padding-right: 30px;
     padding-left: 30px;
 }
 
 .home-link {
     margin-right: 35px;
-    /* pointer-events: none; */
+    margin-top: 1px;
 }
 
 .home-ico {
-    width: 30px;
-    height: 33px;
+    width: 24px;
+    height: 25px;
 }
 
 .stat-link {
     height: 29px;
+    pointer-events: none;
 }
 
 .stat-ico {
-    width: 30px;
-    height: 39px;
+    width: 26px;
+    height: 35px;
 }
 
 .add {
@@ -314,7 +315,7 @@ label span {
 }
 
 .edit-link {
-    margin-left: 117px;
+    margin-left: 131px;
     height: 24px;
 }
 

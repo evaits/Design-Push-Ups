@@ -1,6 +1,7 @@
         // Print data
 if(localStorage.getItem("arr") == null){
   localStorage.setItem("arr", 0)
+  localStorage.setItem('best', 0)
 }
 
 let arr = []
@@ -43,7 +44,7 @@ else {
         // Sort and get Dates
 let ms = []
 for(let i = 0; i<localStorage.length; i++){
-  if((localStorage.key(i)=='arr') || (localStorage.key(i) == "today")){
+  if((localStorage.key(i)=='arr') || (localStorage.key(i) == "today") || (localStorage.key(i) == 'best')){
       continue
   }
 
