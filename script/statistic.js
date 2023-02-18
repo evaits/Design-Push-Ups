@@ -128,9 +128,7 @@ let times = 0;
 for(let i = 0; i<data.length; i++){
     times += Number(data[i])
 }
-for(let i = 0; i<arr.length; i++){
-    times += Number(arr[i])
-}
+
 let repeats = document.querySelector('.times').innerHTML = times + ' times in ' + data.length + ' days' 
 
 

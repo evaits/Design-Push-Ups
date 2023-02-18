@@ -13,6 +13,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
+    <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />            
+        <data android:scheme="http"/>
+        <data android:scheme="https"/>
+        <data android:host="www.instagram.com"/>
+      </intent-filter>
+
     <title>Push Up</title>
 </head>
 <body>
@@ -23,9 +32,8 @@
                 <h3 class="title">
                     Profile
                 </h3>
-                <img src="img/Stat/dots.png" alt="dots" class="dots">
+                <img src="img/today-approaches/dots.png" alt="dots" class="dots">
             </div>
-            
         </header>
     
         
@@ -39,7 +47,87 @@
                             <p>You can it</p>
                         </div>
                     </div>
-                    <a href="#!" class="link"></a>
+                    <a href="#!" class="edit-data">Edit</a>
+                </div>
+                <div class="bottom">
+                    <div class="block">
+                        <p>180cm</p>
+                        Height
+                    </div>
+                    <div class="block">
+                        <p>65kg</p>
+                        Weight
+                    </div>
+                    <div class="block">
+                        <p>22yo</p>
+                        Age
+                    </div>
+                </div>
+            </div>
+
+            <div class="data-card">
+                <div class="section">
+                    <h3 class="card-title">
+                        Account
+                    </h3>
+                    <div class="links">
+
+                        <a href="#!" class="link">
+                            <div class="left">
+                                <img src="img/profile/profile.png" alt="Personal data" class="link-img">
+                                <p>Personal Data</p>
+                            </div>
+                            <img src="img/profile/arr.png" alt="arrow" class="arrow">
+                        </a>
+
+                        <a href="statistic.html" class="link">
+                            <div class="left">
+                                <img src="img/profile/achievement.png" alt="Achievement" class="link-img">
+                                <p>Achievement</p>
+                            </div>
+                            <img src="img/profile/arr.png" alt="arrow" class="arrow">
+                        </a>
+
+                        <a href="edit.html" class="link">
+                            <div class="left">
+                                <img src="img/profile/activity.png" alt="Personal data" class="link-img">
+                                <p>Activity History</p>
+                            </div>
+                            <img src="img/profile/arr.png" alt="arrow" class="arrow">
+                        </a>
+
+                        <a href="index.html" class="link">
+                            <div class="left">
+                                <img src="img/profile/workout.png" alt="Personal data" class="link-img">
+                                <p>Workout Progress</p>
+                            </div>
+                            <img src="img/profile/arr.png" alt="arrow" class="arrow">
+                        </a>
+
+                    </div>
+                </div>
+                <div class="section">
+                    <h3 class="card-title">
+                        Other
+                    </h3>
+                    <div class="links">
+                        <a href="https://www.instagram.com/s.den4ik.h/" class="link">
+                            <div class="left">
+                                <img src="img/profile/contact.png" alt="contact"  class="link-img">
+                                <p>Contact Us</p>
+                            </div>
+                            <img src="img/profile/arr.png"  alt="arrow" class="arrow">
+                        </a>
+
+                        <a href="#!" class="link">
+                            <div class="left">
+                                <img src="img/profile/setting.png" alt="setting"  class="link-img">
+                                <p>Settings</p>
+                            </div>
+                            <img src="img/profile/arr.png"  alt="arrow" class="arrow">
+                        </a>
+
+                    </div>
                 </div>
             </div>
         </main>
