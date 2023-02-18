@@ -133,3 +133,12 @@ arr[0] == 0 ? repeats.innerHTML = times + ' times in ' + data.length + ' days' :
     // Best
 let best = localStorage.getItem('best')
 document.querySelector('.best').innerHTML = best + ' times in one approach'
+
+// Clear localStorage
+function clear_local() {
+    let clear_ask = confirm('Are you sure?')
+    if(clear_ask){
+        localStorage.clear()
+        location = location
+    }
+}
