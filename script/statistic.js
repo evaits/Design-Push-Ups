@@ -3,6 +3,19 @@ if(localStorage.getItem("arr") == null){
     localStorage.setItem('best', 0)
   }
 
+// Arr
+let arr = []
+arr = localStorage.getItem("arr")
+arr = arr.split(',')
+for(let i = 0; i<arr.length; i++){
+  arr[i] = Number(arr[i])
+}
+
+let sum = 0
+for(let i = 0; i<arr.length; i++){
+    sum += Number(arr[i])
+}
+
 // Sort and get Dates
 let ms = []
 
@@ -21,7 +34,7 @@ for(let i = 0; i<ms.length; i++){
   date.push(Intl.DateTimeFormat('en-US').format(ms[i]))
 }
 let labels = []
-for(let i = 0; i<date.length && i<7; i++){
+for(let i = 0; i<date.length && i<6; i++){
     // Get date from Local Storage
     date_localStorage = date[i]
 
@@ -34,12 +47,15 @@ for(let i = 0; i<date.length && i<7; i++){
     reform_date = reform_date[3]+reform_date[4] + reform_date[2] + reform_date[0] + reform_date[1]
     labels.push(reform_date)
 }
+labels.unshift('today')
 
 // Get value from localStorage
 let data = []
 for(let i = 0; i<labels.length; i++){
     data.push(localStorage.getItem(date[i]))
 }
+data.unshift(sum)
+// data = data.reverse()
 
 // Graf
 var ctx = document.querySelector('.graf');
@@ -104,19 +120,8 @@ var myChart = new Chart(ctx, {
 
 
         // Print stat
-// Arr
-let arr = []
-arr = localStorage.getItem("arr")
-arr = arr.split(',')
-for(let i = 0; i<arr.length; i++){
-  arr[i] = Number(arr[i])
-}
-
     // Days
-let days = document.querySelector('.days')
-arr[0] == 0 ? days.innerHTML = data.length + ' days' : days.innerHTML = data.length+1 + ' days'
-console.log(data)
-
+let days = document.querySelector('.days').innerHTML = data.length + ' days'
 
     // Times
 let times = 0;
@@ -126,19 +131,14 @@ for(let i = 0; i<data.length; i++){
 for(let i = 0; i<arr.length; i++){
     times += Number(arr[i])
 }
-let repeats = document.querySelector('.times')
+let repeats = document.querySelector('.times').innerHTML = times + ' times in ' + data.length + ' days' 
 
-arr[0] == 0 ? repeats.innerHTML = times + ' times in ' + data.length + ' days' : repeats.innerHTML = times + ' times in ' + Number(data.length+1) + ' days'
 
     // Best
 let best = localStorage.getItem('best')
 document.querySelector('.best').innerHTML = best + ' times in one approach'
 
-// Clear localStorage
-function clear_local() {
-    let clear_ask = confirm('Are you sure?')
-    if(clear_ask){
-        localStorage.clear()
-        location = location
-    }
-}
+// Back
+function goBack(){
+    window.history.back();
+};

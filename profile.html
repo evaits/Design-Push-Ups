@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style-reset.css">
-    <link rel="stylesheet" href="css/statistic.css">
+    <link rel="stylesheet" href="css/profile.css">
 
     <link rel="shortcut icon" href="img/header-ico.png" type="image/x-icon">
 
@@ -21,68 +21,29 @@
             <div class="menu">
                 <img src="img/today-approaches/back.png" alt="back" class="back" onclick="goBack()">
                 <h3 class="title">
-                    Workout Tracker
+                    Profile
                 </h3>
                 <img src="img/Stat/dots.png" alt="dots" class="dots">
             </div>
-            <canvas class="graf" width="315" height="172"></canvas>
+            
         </header>
-    </div>
+    
+        
         <main class="main">
-            <h2 class="main-title">
-                Your Achievements
-            </h2>
-            <div class="blocks">
-                <div class="block">
-                    <div class="left">
+            <div class="profile">
+                <div class="top">
+                    <div class="name-ico">
+                        <img src="img/profile/avatar-woman.png" alt="avatar" class="avatar">
                         <div class="text">
-                            <h3 class="block-title">
-                                Your training continues
-                            </h3>
-                            <p class="statistic days">
-                                10 days
-                            </p>
-                        </div>
-                        <div class="motivation">
-                            <p>You can do everything</p>
+                            <div class="name">Stefani Wong</div>
+                            <p>You can it</p>
                         </div>
                     </div>
-                    <img src="img/Stat/img-1.png" alt="pictures" class="img-1">
-                </div>
-                <div class="block">
-                    <div class="left">
-                        <div class="text">
-                            <h3 class="block-title">
-                                You squeezed 
-                            </h3>
-                            <p class="statistic times">
-                                1203 times in 10 days
-                            </p>
-                        </div>
-                        <div class="motivation">
-                            <p>Mountains don't bother you</p>
-                        </div>
-                    </div>
-                    <img src="img/Stat/img-2.png" alt="pictures" class="img-2">
-                </div>
-                <div class="block">
-                    <div class="left">
-                        <div class="text">
-                            <h3 class="block-title">
-                                Your best result
-                            </h3>
-                            <p class="statistic best">
-                                20 times in one approach
-                            </p>
-                        </div>
-                        <div class="motivation">
-                            <p>This is your goal</p>
-                        </div>
-                    </div>
-                    <img src="img/Stat/img-3.png" alt="pictures" class="img-3">
+                    <a href="#!" class="link"></a>
                 </div>
             </div>
-
+        </main>
+    </div>
                                 <!-- MODAL -->
         <div class="modal-bg">
             <div class="modal">
@@ -305,27 +266,24 @@
                 </div>
             </div>
         </div>
-        </main>
 
         <div class="navbar">
             <a href="index.html" class="home-link">
                 <img src="img/Navbar/home-ico.png" alt="home" class="home-ico">
             </a>
-            <a href="statistic.html" class="stat-link"><img src="img/Navbar/statistic-activ.png" alt="stat" class="stat-ico"></a>
+            <a href="statistic.html" class="stat-link"><img src="img/Navbar/statistic-ico.png" alt="stat" class="stat-ico"></a>
             <div class="add" onclick="open_modal()">
                 <img src="img/+.png" alt="plus" class="plus">
             </div>
             <a href="edit.html" class="edit-link">
                 <img src="img/Navbar/edit-ico.png" alt="edit" class="edit-ico">
             </a>
-            <a href="profile.html" class="profile-link">
-                <img src="img/Navbar/profile-ico.png" alt="profile" class="profile-ico">
+            <a href="#!" class="profile-link">
+                <img src="img/Navbar/profile-activ.png" alt="profile" class="profile-ico">
             </a>
         </div>
     
         <script src="script/modal.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script src="script/statistic.js"></script>
           
 </body>
 </html>
