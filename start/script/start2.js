@@ -50,13 +50,15 @@ function addInput(gender) {
 // Jquery click outside input
 $(document).ready(function () {
     $(document).mouseup( function(e){ // событие клика по веб-документу
-		var drop_menu = $('.drop-menu')
-        var div = $( ".gender" ); // тут указываем ID элемента
-		if ( !div.is(e.target) // если клик был не по нашему блоку
+		if(count_menu%2 != 0){
+            var drop_menu = $('.drop-menu')
+            var div = $( ".gender" ); // тут указываем ID элемента
+            if ( !div.is(e.target) // если клик был не по нашему блоку
 		    && div.has(e.target).length === 0 ) { // и не по его дочерним элементам
 			drop_menu.hide(); // скрываем его
             animateCloseMenu()
             count_menu = 0
 		}
+        }
 	});
 }); 

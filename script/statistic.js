@@ -1,7 +1,10 @@
 if(localStorage.getItem("arr") == null){
     localStorage.setItem("arr", 0)
-    localStorage.setItem('best', 0)
   }
+
+if(localStorage.getItem("best") == null){
+  localStorage.setItem('best', 0)
+}
 
 // Arr
 let arr = []

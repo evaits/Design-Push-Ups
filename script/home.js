@@ -1,6 +1,9 @@
         // Print data
 if(localStorage.getItem("arr") == null){
   localStorage.setItem("arr", 0)
+}
+
+if(localStorage.getItem("best") == null){
   localStorage.setItem('best', 0)
 }
 
