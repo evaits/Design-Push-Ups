@@ -25,9 +25,39 @@
             It will help us to know more about you!
         </h2>
     </header>
+
+
     <main class="main">
-        <input type="text" name="FirstName" id="FirstName">
+        <div class="block">
+            <img src="../img/Start/profile.png" alt="profile" class="img">
+            <input type="text" name="FirstName" id="FirstName" placeholder="First Name" class="input">
+        </div>
+
+        <div class="block">
+            <img src="../img/Start/profile.png" alt="profile" class="img">
+            <input type="text" name="LastName" id="LastName" placeholder="Last Name" class="input">
+        </div>
+
+        <div class="block gender">
+            <div class="context" onclick="open_dropMenu()">
+                <img src="../img/Start/gender.png" alt="profile" class="img">
+
+                <input type="text" name="gender" id="gender" value="" placeholder="Choose Gender" class="input" disabled>
+                <img src="/img/Start/arrow.png" alt="arrow" class="arrow">
+            </div>
+
+            <div class="drop-menu">
+                <div class="male" onclick="addInput('Male')">Male</div>
+                <hr>
+                <div class="female" onclick="addInput('Female')">Female</div>
+            </div>
+        </div>
+
+        
+        
+         
     </main>
+
 
     <footer class="footer">
         <a href="start2.html">
@@ -37,5 +67,8 @@
             </div>
         </a>
     </footer>
+
+    <script src="/script/jquery-3.6.3.min.js"></script>
+    <script src="script/start2.js"></script>
 </body>
 </html>
