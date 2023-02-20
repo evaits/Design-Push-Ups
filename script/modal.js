@@ -1,4 +1,9 @@
-      // Modal
+// User
+if(localStorage.getItem('user') == null) {
+  location = 'start/start1.html'
+}
+
+    // Modal
 let count_modal = 0
 function open_modal() {
     if(count_modal%2==0){

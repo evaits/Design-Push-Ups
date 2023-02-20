@@ -20,8 +20,6 @@ else{
     avatar.setAttribute('src', 'img/profile/avatar-boy.png')
 }
 
-console.log(user.sex)
-
 // Back
 function goBack(){
     window.history.back();

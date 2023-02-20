@@ -124,7 +124,7 @@ var myChart = new Chart(ctx, {
 
         // Print stat
     // Days
-let days = document.querySelector('.days').innerHTML = data.length + ' days'
+let days = document.querySelector('.days').innerHTML = ms.length+1 + ' days'
 
     // Times
 let times = 0;
@@ -132,7 +132,7 @@ for(let i = 0; i<data.length; i++){
     times += Number(data[i])
 }
 
-let repeats = document.querySelector('.times').innerHTML = times + ' times in ' + data.length + ' days' 
+let repeats = document.querySelector('.times').innerHTML = times + ' times in ' + Number(ms.length+1) + ' days' 
 
 
     // Best

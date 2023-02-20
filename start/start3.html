@@ -24,13 +24,38 @@
         <h2 class="sub-title">
             You are all set now, let’s reach your goals together with us
         </h2>
+
+        <div class="block">
+            <img src="../img/Start/daily-goal.png" alt="weight" class="img">
+
+            <input type="number" placeholder="Daily Goal" name="goal" class="input goal">
+        </div>
     </div>
     <footer class="footer">
-        <a href="../index.html">
-            <div class="btn">
+            <div class="btn" onclick = 'save_data()'>
                 Go To Home
             </div>
-        </a>
     </footer>
+
+    <script>
+        // Daily goal
+        function save_data() {
+            let goal = document.querySelector('.goal').value
+            if(goal == ''){
+                alert('Error')
+                return
+            }
+            let user = localStorage.getItem('user')
+            user = JSON.parse(user)
+            user.daily = goal
+            localStorage.setItem('user', JSON.stringify(user));
+            location = '../index.html'
+        }
+
+        // User
+        let user = localStorage.getItem('user')
+        user = JSON.parse(user)
+        document.querySelector('.title').innerHTML = 'Welcome, ' + user.FirstName
+    </script>
 </body>
 </html>

@@ -114,4 +114,8 @@ function save_data() {
     height: height
   }
   localStorage.setItem('user', JSON.stringify(user));
+  location = 'start3.html'
 }
+
+
+

@@ -15,7 +15,11 @@ const date = []
 for(let i = 0; i<ms.length; i++){
   date.push(Intl.DateTimeFormat('en-US').format(ms[i]))
 }
-        
+   
+// Get user
+let user = localStorage.getItem('user')
+user = JSON.parse(user)
+
         // Print History
 if(date.length > 0){
   let blocks = document.querySelector('.blocks')
@@ -76,7 +80,7 @@ if(date.length > 0){
     dots.setAttribute('onclick', 'open_delete('+ i +')')
 
     // Percent settings
-    localStorage.getItem(date_localStorage) >= 100 ? percent.innerHTML = 'Done' : percent.innerHTML = 'Sick';
+    localStorage.getItem(date_localStorage) >= Number(user.daily) ? percent.innerHTML = 'Done' : percent.innerHTML = 'Sick';
     
     
     // Add in site

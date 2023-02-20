@@ -15,6 +15,10 @@ for(let i = 0; i<arr.length; i++){
 }
 
 
+// Get user
+let user = localStorage.getItem('user')
+user = JSON.parse(user)
+
 
 // Print today statistic
 let push = document.querySelector('.repeat')
@@ -32,8 +36,8 @@ average.innerHTML = Math.round(sum/arr.length) + '/ap'
 
 
 // Daily goal
-let daily_percent = Math.round(sum/100*100)+'%'
-if(sum<=100){
+let daily_percent = Math.round(sum/Number(user.daily)*100)+'%'
+if(sum<=Number(user.daily)){
   document.querySelector('.percent').innerHTML = daily_percent
   document.querySelector('.done').style.width = daily_percent
 }
