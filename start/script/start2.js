@@ -44,6 +44,7 @@ function addInput(gender) {
     document.querySelector('#gender').value = gender
     count_menu = 1
     open_dropMenu()
+    window.gender_global = gender;
 }
 
 
@@ -62,3 +63,55 @@ $(document).ready(function () {
         }
 	});
 }); 
+
+// Get data
+function save_data() {
+  // First Name
+  let firstName = document.querySelector('#FirstName').value
+  if(firstName.length < 2){
+    alert('Error')
+    return
+  }
+
+  // Last Name
+  let lastName = document.querySelector('#LastName').value
+  if(lastName.length < 2){
+    alert('Error')
+    return
+  }
+
+  // Gender
+  let gender = window.gender_global;
+  if(gender == undefined ){alert('Error')}
+
+  // Age
+  age = document.querySelector('.age').value
+  if((age < 3) || (age > 100)){
+    alert('Error')
+    return
+  }
+
+  // Weight
+  weight = document.querySelector('.weight').value
+  if((weight < 10) || (weight > 300)){
+    alert('Error')
+    return
+  }
+
+  // Height
+  height = document.querySelector('.height').value
+  if((height < 50) || (height > 250)){
+    alert('Error')
+    return
+  }
+
+  user = {
+    FirstName: firstName,
+    LastName: lastName,
+    sex: gender,
+    age: age,
+    weight: weight,
+    height: height
+  }
+  localStorage.setItem('user', JSON.stringify(user));
+}

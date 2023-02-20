@@ -107,35 +107,6 @@ hr {
     border: 0,1px solid rgba(158, 158, 158, 0.13);
 }
 
-#day {
-    width: 26px;
-    padding-right: 5px;
-    text-align: center;
-}
-
-#moon {
-    width: 37px;
-    padding-right: 0;
-    padding-left: 5px;
-    padding-right: 5px;
-    text-align: center;
-}
-
-#year {
-    width: 37px;
-    padding-right: 0;
-    padding-left: 5px;
-    text-align: center;
-}
-
-.block p {
-    margin-top: auto;
-    margin-bottom: auto;
-    font-family: 'Poppins';
-    color: rgb(39, 37, 37);
-    font-size: 12px;
-}
-
 .last {
     width: 80%;
 }

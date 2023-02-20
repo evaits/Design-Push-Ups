@@ -47,7 +47,7 @@ else {
         // Sort and get Dates
 let ms = []
 for(let i = 0; i<localStorage.length; i++){
-  if((localStorage.key(i)=='arr') || (localStorage.key(i) == "today") || (localStorage.key(i) == 'best')){
+  if((localStorage.key(i)=='arr') || (localStorage.key(i) == "today") || (localStorage.key(i) == 'best') || (localStorage.key(i) == 'user')){
       continue
   }
 
