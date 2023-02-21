@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style-reset.css">
+    <link rel="stylesheet" href="css/personal-data.css">
+
+    <link rel="shortcut icon" href="img/header-ico.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Push Up</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="profile.html"><img src="img/today-approaches/back.png" alt="back" class="back"></a>
+            <h3 class="title">
+                Personal Data
+            </h3>
+            <img src="img/today-approaches/dots.png" alt="dots" class="dots">
+        </header>
+        <main class="main">
+            <div class="block firstName" onclick="edit('firstName', 'main')">
+                <div class="left">
+                    <img src="img/Start/profile.png" alt="firstName" class="img">
+                    <p class="placeholder placeholder_firstName">First Name</p>
+                </div>    
+                <div class="right">
+                    <p>Denys</p>
+                    <img src="img/Start/arrow.png" alt="arrow" class="arrow">
+                </div>
+            </div>
+
+            <div class="block lastName" onclick="edit('lastName', 'gender')">
+                <div class="left">
+                    <img src="img/Start/profile.png" alt="lastName" class="img">
+                    <p class="placeholder placeholder_lastName">Last Name</p>
+                </div>    
+                <div class="right">
+                    <p>Shkaraban</p>
+                    <img src="img/Start/arrow.png" alt="arrow" class="arrow">
+                </div>
+            </div>
+
+            <div class="block gender" onclick="edit('gender', 'age')">
+                <div class="left">
+                    <img src="img/Start/gender.png" alt="Gender" class="img">
+                    <p class="placeholder placeholder_lastName">Gender</p>
+                </div>    
+                <div class="right">
+                    <p>Male</p>
+                    <img src="img/Start/arrow.png" alt="arrow" class="arrow">
+                </div>
+            </div>
+        </main>
+
+
+        <div class="age">
+            
+        </div>
+    </div>
+
+    <script src="script/jquery-3.6.3.min.js"></script>
+    <script src="script/personal-data.js"></script>
+</body>
+</html>
