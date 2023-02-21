@@ -35,6 +35,10 @@
     margin-bottom: 20px;
 }
 
+/* Placeholders */
+.placeholder::-webkit-input-placeholder {
+    color: white;
+}
 
 .input {
     width: 91%;
