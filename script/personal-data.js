@@ -3,11 +3,11 @@ let user = localStorage.getItem('user')
 user = JSON.parse(user)
 
 // Print Data
-document.querySelector('.FirstName-data').innerHTML = user.FirstName;
+document.querySelector('.FirstName-data').innerHTML = user.firstName;
 
-document.querySelector('.LastName-data').innerHTML = user.LastName;
+document.querySelector('.LastName-data').innerHTML = user.lastName;
 
-document.querySelector('.gender-data').innerHTML = user.sex;
+document.querySelector('.gender-data').innerHTML = user.gender;
 
 document.querySelector('.age-data').innerHTML = user.age + 'yo';
 
@@ -18,11 +18,15 @@ document.querySelector('.height-data').innerHTML = user.height + 'cm';
 document.querySelector('.repeats').innerHTML = user.daily + ' Repeats';
 
 
+let array_keys = []
 // Create Edit Window
 function edit(name){
     let div = document.querySelector('.' + name)
-
-    
+    let button = document.querySelector('.btn')
+    button.innerHTML = 'Save'
+    console.log(button)
+    button.setAttribute('onclick', 'save_data()')
+    array_keys.push(name)
     // Check Type
     if((name == 'firstName') || (name == 'lastName')){
         let placeholder = document.querySelector('.placeholder_' + name).textContent
@@ -36,7 +40,7 @@ function edit(name){
         block.className = 'block block_' + name
         img.className = 'img'
         img.setAttribute('src', 'img/personal-data/' + name + '.png')
-        input.className = 'input'
+        input.className = 'input input_'+name
         input.setAttribute('placeholder', placeholder)
 
         // Add on page
@@ -60,12 +64,12 @@ function edit(name){
         let female = document.createElement('div')
 
         // Add Atributs
-        block.className = 'block gender'
+        block.className = 'block gender block_' + name
         context.className = 'context'
         context.setAttribute('onclick', ('open_dropMenu()'))
         img.className = 'img'
         img.setAttribute('src', 'img/personal-data/gender.png')
-        input.className = 'input'
+        input.className = 'input input_'+name
         input.setAttribute('disabled', true)
         input.setAttribute('placeholder', 'Choose Gender')
         input.value = ''
@@ -108,7 +112,7 @@ function edit(name){
         block.className = 'block block_' + name
         img.className = 'img'
         img.setAttribute('src', 'img/personal-data/' + name + '.png')
-        input.className = 'input'
+        input.className = 'input input_'+name
         input.setAttribute('placeholder', placeholder)
         input.type = 'number'
 
@@ -133,10 +137,10 @@ function edit(name){
 
         // Add Atributs
         block_wrapper.className = 'block-wrapper'
-        block.className = 'block last ' + name
+        block.className = 'block last block_' + name
         img.className = 'img'
         img.setAttribute('src', 'img/Start/'+ name +'.png')
-        input.className = 'input'
+        input.className = 'input input_' + name
         input.setAttribute('placeholder',  placeholder)
         input.type = 'number'
         img_block.className = 'size'
@@ -154,6 +158,39 @@ function edit(name){
     }
 }
 
+function save_data() {
+    let count = 0
+    for(let i = 0; i<array_keys.length; i++){
+        let element = document.querySelector('.input_' + array_keys[i])
+        if(element.value.length < 2){
+            let block = document.querySelector('.block_'+ array_keys[i])
+            element.classList.add('placeholder')
+            block.style.background = '#D7D7D7'
+            element.style.background = '#D7D7D7'
+
+            block.onclick =  function(){
+                element.classList.remove('placeholder')
+                block.style.background = '#F7F8F8'
+                element.style.background = '#F7F8F8'
+            }
+            count = 1
+        }
+    }
+    if(count != 0){return}
+    for(let i = 0; i<array_keys.length; i++){
+        let element = document.querySelector('.input_' + array_keys[i])
+        let key = array_keys[i]
+        user[key] = element.value
+    }
+
+    // Save Data
+    localStorage.setItem('user', JSON.stringify(user));
+    location = location
+}
+
+function toProfile() {
+    location = 'profile.html'
+}
 
         // Open Drop Menu
 
@@ -220,4 +257,3 @@ $(document).ready(function () {
 	});
   
 }); 
-

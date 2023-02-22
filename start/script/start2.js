@@ -163,9 +163,9 @@ function save_data() {
   if(count != 0){alert('Invalid Data'); return}
 
   user = {
-    FirstName: firstName.value,
-    LastName: lastName.value,
-    sex: gender_value,
+    firstName: firstName.value,
+    lastName: lastName.value,
+    gender: gender_value,
     age: age.value,
     weight: weight.value,
     height: height.value
