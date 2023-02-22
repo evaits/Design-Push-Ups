@@ -1,11 +1,28 @@
-function edit(name, prepend){
-    let div = document.querySelector('.' + name)
-    let prepend_block = document.querySelector('.' + prepend)
+// Get user
+let user = localStorage.getItem('user')
+user = JSON.parse(user)
 
+// Print Data
+document.querySelector('.FirstName-data').innerHTML = user.FirstName;
+
+document.querySelector('.LastName-data').innerHTML = user.LastName;
+
+document.querySelector('.gender-data').innerHTML = user.sex;
+
+document.querySelector('.age-data').innerHTML = user.age + 'yo';
+
+document.querySelector('.weight-data').innerHTML = user.weight + 'kg';
+
+document.querySelector('.height-data').innerHTML = user.height + 'cm';
+
+document.querySelector('.repeats').innerHTML = user.daily + ' Repeats';
+
+
+// Create Edit Window
+function edit(name){
+    let div = document.querySelector('.' + name)
 
     
-
-
     // Check Type
     if((name == 'firstName') || (name == 'lastName')){
         let placeholder = document.querySelector('.placeholder_' + name).textContent
@@ -77,13 +94,64 @@ function edit(name, prepend){
          drop_menu.append(female)
 
          // Focus
+        open_dropMenu()
+    }
+    else if((name == 'age') || (name == 'daily')){
+        let placeholder = document.querySelector('.placeholder_' + name).textContent
+
+        // Create Elements
+        let block = document.createElement('div')
+        let input = document.createElement('input')
+        let img = document.createElement('img')
+
+        // Add Atributs
+        block.className = 'block block_' + name
+        img.className = 'img'
+        img.setAttribute('src', 'img/personal-data/' + name + '.png')
+        input.className = 'input'
+        input.setAttribute('placeholder', placeholder)
+        input.type = 'number'
+
+        // Add on page
+        div.replaceWith(block)
+        block.append(img)
+        block.append(input)
+
+        // Focus
         input.focus()
     }
-    else{
+    
+    else {
+        let placeholder = document.querySelector('.placeholder_' + name).textContent
+
+        // Create Elements
+        let block_wrapper = document.createElement('div')
+        let block = document.createElement('div')
+        let img = document.createElement('img')
+        let input = document.createElement('input')
+        let img_block = document.createElement('img')
+
+        // Add Atributs
+        block_wrapper.className = 'block-wrapper'
+        block.className = 'block last ' + name
+        img.className = 'img'
+        img.setAttribute('src', 'img/Start/'+ name +'.png')
+        input.className = 'input'
+        input.setAttribute('placeholder',  placeholder)
         input.type = 'number'
+        img_block.className = 'size'
+        img_block.setAttribute('src', 'img/personal-data/'+ name + '-block.png')
+
+        // Add on page
+        div.replaceWith(block_wrapper)
+        block_wrapper.append(block)
+        block.append(img)
+        block.append(input)
+        block_wrapper.append(img_block)
+
+        // Focus
+        input.focus()
     }
-    
-    
 }
 
 

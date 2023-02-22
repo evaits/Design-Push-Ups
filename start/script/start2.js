@@ -165,7 +165,7 @@ function save_data() {
   user = {
     FirstName: firstName.value,
     LastName: lastName.value,
-    sex: gender_value.value,
+    sex: gender_value,
     age: age.value,
     weight: weight.value,
     height: height.value

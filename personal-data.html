@@ -25,46 +25,92 @@
             <img src="img/today-approaches/dots.png" alt="dots" class="dots">
         </header>
         <main class="main">
-            <div class="block firstName" onclick="edit('firstName', 'main')">
+            <div class="block firstName" onclick="edit('firstName')">
                 <div class="left">
                     <img src="img/Start/profile.png" alt="firstName" class="img">
                     <p class="placeholder placeholder_firstName">First Name</p>
                 </div>    
                 <div class="right">
-                    <p>Denys</p>
+                    <p class="FirstName-data">Denys</p>
                     <img src="img/Start/arrow.png" alt="arrow" class="arrow">
                 </div>
             </div>
 
-            <div class="block lastName" onclick="edit('lastName', 'gender')">
+            <div class="block lastName" onclick="edit('lastName')">
                 <div class="left">
                     <img src="img/Start/profile.png" alt="lastName" class="img">
                     <p class="placeholder placeholder_lastName">Last Name</p>
                 </div>    
                 <div class="right">
-                    <p>Shkaraban</p>
+                    <p class="LastName-data">Shkaraban</p>
                     <img src="img/Start/arrow.png" alt="arrow" class="arrow">
                 </div>
             </div>
 
-            <div class="block gender" onclick="edit('gender', 'age')">
+            <div class="block gender" onclick="edit('gender')">
                 <div class="left">
                     <img src="img/Start/gender.png" alt="Gender" class="img">
                     <p class="placeholder placeholder_lastName">Gender</p>
                 </div>    
                 <div class="right">
-                    <p>Male</p>
+                    <p class="gender-data">Male</p>
                     <img src="img/Start/arrow.png" alt="arrow" class="arrow">
                 </div>
             </div>
-        </main>
 
+            <div class="block age" onclick="edit('age')">
+                <div class="left">
+                    <img src="img/personal-data/age.png" alt="age" class="img">
+                    <p class="placeholder placeholder_age">Age</p>
+                </div>    
+                <div class="right">
+                    <p class="age-data">17yo</p>
+                    <img src="img/Start/arrow.png" alt="arrow" class="arrow">
+                </div>
+            </div>
 
-        <div class="age">
+            <div class="block weight" onclick="edit('weight')">
+                <div class="left">
+                    <img src="img/personal-data/weight.png" alt="weight" class="img">
+                    <p class="placeholder placeholder_weight">Weight</p>
+                </div>    
+                <div class="right">
+                    <p class="weight-data">73kg</p>
+                    <img src="img/Start/arrow.png" alt="arrow" class="arrow">
+                </div>
+            </div>
+
+            <div class="block height" onclick="edit('height')">
+                <div class="left">
+                    <img src="img/personal-data/height.png" alt="height" class="img">
+                    <p class="placeholder placeholder_height">Height</p>
+                </div>    
+                <div class="right">
+                    <p class="height-data">183cm</p>
+                    <img src="img/Start/arrow.png" alt="arrow" class="arrow">
+                </div>
+            </div>
+
+            <div class="block daily" onclick="edit('daily')">
+                <div class="left">
+                    <img src="img/personal-data/daily.png" alt="daily" class="img">
+                    <p class="placeholder placeholder_daily">Daily</p>
+                </div>    
+                <div class="right">
+                    <p class="repeats">100 Repeats</p>
+                    <img src="img/Start/arrow.png" alt="arrow" class="arrow">
+                </div>
+            </div>
             
-        </div>
+        </main>
     </div>
+    <footer class="footer">
+        <div class="btn" onclick="save_data()">
+            Edit
+        </div>
+    </footer>
 
+    
     <script src="script/jquery-3.6.3.min.js"></script>
     <script src="script/personal-data.js"></script>
 </body>
