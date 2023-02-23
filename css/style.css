@@ -322,19 +322,18 @@ body {
     margin-bottom: 21px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 10px 40px rgba(29, 22, 23, 0.07);
-    border-radius: 20px;
-    padding-top: 50px;
+    border-radius: 0px 0px 20px 20px;
+    padding-top: 10px;
     text-align: start;
     overflow: auto;
 }
 
 .activity-title {
-    position: fixed;
-    top: 388px;
-    left: 26px;
-    width: 77%;
+    /* position: absolute; */
+    width: 89.5%;
     height: 36px;
-    background-color: white;
+    text-align: start;
+    background-color: rgb(255, 255, 255);
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
@@ -407,7 +406,7 @@ body {
 
                 /* Navbar */
 .navbar{
-    position: fixed;
+    position: relative;
     display: flex;
     bottom: 0;
     width: 100%;

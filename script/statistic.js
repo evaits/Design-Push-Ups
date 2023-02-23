@@ -139,6 +139,14 @@ let repeats = document.querySelector('.times').innerHTML = times + ' times in ' 
 let best = localStorage.getItem('best')
 document.querySelector('.best').innerHTML = best + ' times in one approach'
 
+// Get user
+let user = localStorage.getItem('user')
+user = JSON.parse(user)
+
+if(user.sport == 'Squat'){
+    document.querySelector('.block-title-times').innerHTML = 'You squatted'
+}
+
 // Back
 function goBack(){
     window.history.back();

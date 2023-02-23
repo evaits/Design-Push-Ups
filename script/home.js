@@ -21,12 +21,13 @@ user = JSON.parse(user)
 
 // Print Type of Sport
 if(user.sport == 'Squat'){
-  document.querySelector('.header-title').innerHTML = 'Squatting'
+  let header = document.querySelector('.header-title')
+  header.innerHTML = 'Squatting'
+  header.style.fontWeight = '600'
   let icon = document.querySelector('.icon')
-  icon.style.backgroundImage = "url('../img/Home/squat.png')";
+  icon.style.backgroundImage = "url('img/Home/squat.png')";
   icon.style.backgroundSize = '35px'
   icon.style.backgroundPosition = '40px'
-  console.log(document.querySelector('.icon'))
 }
 
 
