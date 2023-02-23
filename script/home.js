@@ -19,6 +19,16 @@ for(let i = 0; i<arr.length; i++){
 let user = localStorage.getItem('user')
 user = JSON.parse(user)
 
+// Print Type of Sport
+if(user.sport == 'Squat'){
+  document.querySelector('.header-title').innerHTML = 'Squatting'
+  let icon = document.querySelector('.icon')
+  icon.style.backgroundImage = "url('../img/Home/squat.png')";
+  icon.style.backgroundSize = '35px'
+  icon.style.backgroundPosition = '40px'
+  console.log(document.querySelector('.icon'))
+}
+
 
 // Print today statistic
 let push = document.querySelector('.repeat')
