@@ -38,7 +38,7 @@
     justify-content: space-between;
     background-color: #F7F8F8;
     padding: 15px;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     border-radius: 16px;
 }
 
@@ -82,7 +82,8 @@
     color: #ADA4A5;
 }
 
-.repeats {
+.repeats,
+.type-data {
     width: 100px;
 }
 
@@ -114,9 +115,12 @@
     color: #7B6F72;
 }
 
+/* Gender */
+
 .context {
     display: flex;
     width: 100%;
+    border-radius: 14px;
 }
 
 .gender {
@@ -154,12 +158,52 @@
     margin-top: 10px;
 }
 
+hr {
+    border: 0,1px solid rgba(158, 158, 158, 0.13);
+}
+
+/* Sport */
+
+.sport-arr {
+    width: 20px;
+    height: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 50px;
+    transform: rotate(90deg);
+}
+
 .context {
+    display: flex;
     border-radius: 14px;
 }
 
-hr {
-    border: 0,1px solid rgba(158, 158, 158, 0.13);
+.drop-menu-sport {
+    display: none;
+    font-family: 'Poppins';
+    color: rgb(39, 37, 37);
+    width: 100%;
+    padding: 15px 0px;
+    background-color:#f4f4f4;
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    border-radius: 14px;
+    z-index: 9999;
+}
+
+.drop-menu-sport div {
+    text-align: start;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.push {
+    margin-bottom: 10px;
+}
+
+.squat {
+    margin-top: 10px;
 }
 
 .last {

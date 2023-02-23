@@ -17,6 +17,8 @@ document.querySelector('.height-data').innerHTML = user.height + 'cm';
 
 document.querySelector('.repeats').innerHTML = user.daily + ' Repeats';
 
+document.querySelector('.type-data').innerHTML = user.sport
+
 
 let array_keys = []
 // Create Edit Window
@@ -24,7 +26,6 @@ function edit(name){
     let div = document.querySelector('.' + name)
     let button = document.querySelector('.btn')
     button.innerHTML = 'Save'
-    console.log(button)
     button.setAttribute('onclick', 'save_data()')
     array_keys.push(name)
     // Check Type
@@ -125,6 +126,56 @@ function edit(name){
         input.focus()
     }
     
+    else if(name == 'sport'){
+        // Create Elements
+        let block = document.createElement('div')
+        let context = document.createElement('div')
+        let img = document.createElement('img')
+        let input = document.createElement('input')
+        let arrow = document.createElement('img')
+        let drop_menu = document.createElement('div')
+        let push = document.createElement('div')
+        let hr = document.createElement('hr')
+        let squat = document.createElement('div')
+
+        // Add Atributs
+        block.className = 'block gender block_' + name
+        context.className = 'context'
+        context.setAttribute('onclick', ('open_dropMenuSport()'))
+        img.className = 'img'
+        img.setAttribute('src', 'img/personal-data/sport.png')
+        input.className = 'input input_'+name
+        input.setAttribute('disabled', true)
+        input.setAttribute('placeholder', 'Choose Gender')
+        input.value = ''
+        input.id = 'sport'
+        arrow.setAttribute('src', 'img/Start/arrow.png')
+        arrow.className = 'arrow sport-arr'
+
+        drop_menu.className = 'drop-menu-sport'
+        push.className = 'push'
+        push.setAttribute('onclick', 'addInputSport("Push Up")')
+        push.innerHTML = 'Push Up'
+        squat.className = 'squat'
+        squat.setAttribute('onclick', 'addInputSport("Squat")')
+        squat.innerHTML = 'Squat'
+
+         // Add on page
+         div.replaceWith(block)
+         block.append(context)
+         context.append(img)
+         context.append(input)
+         context.append(arrow)
+
+         block.append(drop_menu)
+         drop_menu.append(push)
+         drop_menu.append(hr)
+         drop_menu.append(squat)
+
+         // Focus
+        open_dropMenuSport()
+    }
+
     else {
         let placeholder = document.querySelector('.placeholder_' + name).textContent
 
@@ -192,8 +243,49 @@ function toProfile() {
     location = 'profile.html'
 }
 
-        // Open Drop Menu
 
+        // Open Drop Menu SPort
+let count_menuSport = 0
+function open_dropMenuSport() {
+    if(count_menuSport == 0){
+        count_menuSport = 1
+        let drop_menu = document.querySelector('.drop-menu-sport')
+        drop_menu.style.display = 'block'
+        animateOpenMenuSport()
+    }
+    else{
+        count_menuSport = 0
+        let drop_menu = document.querySelector('.drop-menu-sport')
+        drop_menu.style.display = 'none'
+        animateCloseMenuSport()
+    }
+}
+
+        // Animation Sport
+function animateOpenMenuSport() {
+    let arrow = document.querySelector('.sport-arr')
+    var animation = arrow.animate([
+      {transform: 'rotate(90deg)'},
+      {transform: 'rotate(0)'}
+    ], 100);
+      animation.addEventListener('finish', function() {
+      arrow.style.transform = 'rotate(0)';
+    });
+}
+
+function animateCloseMenuSport() {
+    let arrow = document.querySelector('.sport-arr')
+    var animation = arrow.animate([
+      {transform: 'rotate(0)'},
+      {transform: 'rotate(90deg)'}
+    ], 100);
+      animation.addEventListener('finish', function() {
+      arrow.style.transform = 'rotate(90deg)';
+    });
+}
+
+
+        // Open Drop Menu
 let count_menu = 0
 function open_dropMenu() {
     if(count_menu%2==0){
@@ -241,6 +333,13 @@ function addInput(gender) {
     window.gender_global = gender;
 }
 
+// Print gender to Input Sport
+function addInputSport(type) {
+    document.querySelector('#sport').value = type
+    count_menuSport = 1
+    open_dropMenuSport()
+}
+
 // Jquery click outside input
 $(document).ready(function () {
     $(document).mouseup( function(e){ // событие клика по веб-документу
@@ -252,6 +351,16 @@ $(document).ready(function () {
 			drop_menu.hide(); // скрываем его
             animateCloseMenu()
             count_menu = 0
+		}
+        }
+        if(count_menuSport == 0){
+            var drop_menu = $('.drop-menu-sport')
+            var div = $( ".sport" ); // тут указываем ID элемента
+            if ( !div.is(e.target) // если клик был не по нашему блоку
+		    && div.has(e.target).length === 0 ) { // и не по его дочерним элементам
+			drop_menu.hide(); // скрываем его
+            animateCloseMenuSport()
+            count_menuSport = 0
 		}
         }
 	});

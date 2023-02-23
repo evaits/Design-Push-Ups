@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/style-reset.css">
     <link rel="stylesheet" href="css/start3.css">
 
-    <link rel="shortcut icon" href="img/header-ico.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/header-ico.png" type="image/x-icon">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,11 +25,27 @@
             You are all set now, let’s reach your goals together with us
         </h2>
 
+        <div class="block sport">
+            <div class="context" onclick="open_dropMenu()">
+                <img src="../img/Start/sport.png" alt="profile" class="img">
+
+                <input type="text" name="sport" id="sport" value="" placeholder="Choose Sport" class="input" disabled>
+                <img src="../img/Start/arrow.png" alt="arrow" class="arrow">
+            </div>
+
+            <div class="drop-menu-sport">
+                <div class="push" onclick="addInput('Push Up')">Push Up</div>
+                <hr>
+                <div class="squat" onclick="addInput('Squat')">Squat</div>
+            </div>
+        </div>
+
         <div class="block goal">
             <img src="../img/Start/daily-goal.png" alt="daily goal" class="img">
 
             <input type="number" placeholder="Daily Goal" name="goal" class="input goal_inp">
         </div>
+
     </div>
     <footer class="footer">
             <div class="btn" onclick = 'save_data()'>
@@ -37,36 +53,7 @@
             </div>
     </footer>
 
-    <script>
-        // Daily goal
-        function save_data() {
-            let count = 0
-            let goal = document.querySelector('.goal_inp')
-            let block_goal = document.querySelector('.goal')
-            if(goal.value == ''){
-                goal.classList.add('placeholder')
-                block_goal.style.background = '#D7D7D7'
-                goal.style.background = '#D7D7D7'
-                block_goal.onclick =  function(){
-                    goal.classList.remove('placeholder')
-                    block_goal.style.background = '#F7F8F8'
-                    goal.style.background = '#F7F8F8'
-                }
-                count++
-            }
-
-            if(count != 0) {alert('Invaild Data'); return}
-            let user = localStorage.getItem('user')
-            user = JSON.parse(user)
-            user.daily = goal.value
-            localStorage.setItem('user', JSON.stringify(user));
-            location = '../index.html'
-        }
-
-        // User
-        let user = localStorage.getItem('user')
-        user = JSON.parse(user)
-        document.querySelector('.title').innerHTML = 'Welcome, ' + user.firstName
-    </script>
+    <script src="../script/jquery-3.6.3.min.js"></script>
+    <script src="script/start3.js"></script>
 </body>
 </html>

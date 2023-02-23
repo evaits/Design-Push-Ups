@@ -69,6 +69,53 @@
     margin-left: 15px;
 }
 
+.arrow {
+    width: 20px;
+    height: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 50px;
+    margin-right: 20px;
+    transform: rotate(90deg);
+}
+
+.context {
+    display: flex;
+    border-radius: 14px;
+}
+
+.drop-menu-sport {
+    display: none;
+    font-family: 'Poppins';
+    color: rgb(39, 37, 37);
+    width: 100%;
+    padding: 15px 0px;
+    background-color:#f4f4f4;
+    position: absolute;
+    bottom: -100px;
+    border-radius: 14px;
+    z-index: 9999;
+}
+
+.drop-menu-sport div {
+    text-align: start;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.push {
+    margin-bottom: 10px;
+}
+
+.squat {
+    margin-top: 10px;
+}
+
+hr {
+    border: 0,1px solid rgba(158, 158, 158, 0.13);
+}
+
+/* Footer */
 .footer {
     padding-left: 24px;
     padding-right: 24px;
