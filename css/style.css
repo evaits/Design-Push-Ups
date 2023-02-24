@@ -319,7 +319,6 @@ body {
     position: relative;
     width: 100%;
     height: 200px;
-    margin-bottom: 21px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 10px 40px rgba(29, 22, 23, 0.07);
     border-radius: 0px 0px 20px 20px;
@@ -355,7 +354,6 @@ body {
     grid-row-gap: 23px;
     margin-left: 28px;
     margin-right: 28px;
-    
 }
 
 .block {
@@ -406,16 +404,13 @@ body {
 
                 /* Navbar */
 .navbar{
-    position: relative;
+    position: fixed;
     display: flex;
     bottom: 0;
-    width: 100%;
     background: #f8f8f8;
     box-shadow: 0px 10px 40px rgb(29 22 23 / 22%);
-    /* padding-top: 24px; */
     padding-top: 27px;
     padding-bottom: 27px;
-    padding-bottom: 24px;
     padding-right: 30px;
     padding-left: 30px;
 }
@@ -529,4 +524,11 @@ body {
 .agree-icon {
     width: 21px;
     height: 21px;
+}
+
+/* Adaptation */
+@media (max-height: 740px) {
+    .activity {
+        padding-bottom: 90px;
+    }
 }
