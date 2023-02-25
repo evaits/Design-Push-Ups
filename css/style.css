@@ -200,7 +200,8 @@ body {
     margin-right: auto;
     background-position: center;
     height: 99px;
-    width: 83vw;
+    width: 100%;
+    text-align: center;
     margin-top: 27px;
     margin-bottom: 25px;
     border-radius: 22px;
@@ -216,6 +217,7 @@ body {
 
 .stat {
     display: flex;
+    justify-content: center;
     padding-left: 27px;
     padding-right: 27px;
 }
@@ -254,7 +256,7 @@ body {
     border-radius: 16px;
     text-align: start;
     display: grid;
-    grid-template-columns: 50px 190px 25px;
+    grid-template-columns: 50px 1fr 0.2fr;
 }
 
 .daily-title {
@@ -323,13 +325,12 @@ body {
     box-shadow: 0px 10px 40px rgba(29, 22, 23, 0.07);
     border-radius: 0px 0px 20px 20px;
     padding-top: 10px;
-    text-align: start;
     overflow: auto;
 }
 
 .activity-title {
     /* position: absolute; */
-    width: 89.5%;
+    width: 90.7%;
     height: 36px;
     text-align: start;
     background-color: rgb(255, 255, 255);
@@ -339,6 +340,7 @@ body {
     font-size: 16px;
     line-height: 24px;
     color: #1D1617;
+    box-shadow: 0px 10px 40px rgba(29, 22, 23, 0.07);
     border-radius: 18px 18px 0px 0px;
     padding-top: 20px;
     padding-left: 32px;
@@ -347,11 +349,10 @@ body {
 
 /* blocks */
 .activity-blocks {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    grid-column-gap: 13px;
-    grid-row-gap: 23px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: start;
     margin-left: 28px;
     margin-right: 28px;
 }
@@ -368,7 +369,10 @@ body {
     background: #FFFFFF;
     box-shadow: 0px 10px 40px rgba(29, 22, 23, 0.07);
     border-radius: 20px;
-    /* row-gap: 13px; */
+}
+
+.block:first-child {
+    margin-bottom: 23px;
 }
 
 .block-vector {
@@ -406,13 +410,13 @@ body {
 .navbar{
     position: fixed;
     display: flex;
+    justify-content: center;
     bottom: 0;
+    width: 100vw;
     background: #f8f8f8;
     box-shadow: 0px 10px 40px rgb(29 22 23 / 22%);
     padding-top: 27px;
     padding-bottom: 27px;
-    padding-right: 30px;
-    padding-left: 30px;
 }
 
 .home-link {
