@@ -24,10 +24,10 @@
 <body>
     <header class="header">
         <div class="titles">
-            <h6 class="sub-title">
+            <h6 class="sub-title lng-sub-title">
                 Welcome Back
             </h6>
-            <h1 class="header-title">
+            <h1 class="header-title lng-title">
                 Push-Ups
             </h1>
         </div>
@@ -38,22 +38,22 @@
     <main class="main">
         <div class="container">
             <div class="today-stat">
-                <h3 class="today-stat-title">
+                <h3 class="today-stat-title lng-stat-title">
                     Today
                 </h3>
                 <div class="stat">
                     <div class="repeats-block">
-                        Repeats
+                        <span class="lng-repeats">Repeats</span>
                         <p class="repeat">23</p>
                     </div>
                     <div class="approach-block">
-                        Approach
+                        <span class="lng-approach">Approach</span>
                         <p class="approach">
                             1
                         </p>
                     </div>
                     <div class="average-block">
-                        Average
+                        <span class="lng-average">Average</span>
                         <p class="average">
                             1/ap
                         </p>
@@ -65,7 +65,7 @@
 
                 <img src="img/Home/daily-img.png" alt="daily-img" class="daily-img">
                 <div class="daily-info">
-                    <h3 class="daily-title">
+                    <h3 class="daily-title lng-daily">
                         Daily Goal
                     </h3>
                     <div class="progress">
@@ -78,6 +78,10 @@
                 </div>
                 <a href="today-approaches.html" class="main-link-to-edit"><img src="img/Home/link-to-edit.png" alt="img" class="main-link-to-edit-img"></img></a>      
             </div>
+            <select name="one" value id="lang">
+                <option value="en">EN</option>
+                <option value="ua">UA</option>
+            </select>
 
             <div class="activity-title">
                 Activity Progress
@@ -331,6 +335,7 @@
         </div>
     </div>
 
+    <script src="script/localisation.js"></script>
     <script src="script/home.js"></script>
     <script src="script/modal.js"></script>
 </body>

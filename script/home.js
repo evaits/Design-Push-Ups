@@ -146,3 +146,30 @@ else{
 
   blocks.append(p)
 }
+
+// Localisation
+let select = document.querySelector('#lang')
+const arrLeng = ['en', 'ua']
+
+select.addEventListener('change', changeUrl)
+
+function changeUrl() {
+  let lang = select.value
+  location.href = window.location.pathname + '#' + lang
+  location.reload()
+}
+
+function changeLang() {
+  let hash = window.location.hash
+  hash = hash.substring(1)
+  if(!arrLeng.includes(hash)){
+    location.href = window.location.pathname + '#en'
+    location.reload() 
+  }
+  select.value = hash
+  for(let key in home){
+    document.querySelector('.lng-' + key).innerHTML = home[key][hash]
+  }
+}
+
+changeLang()
