@@ -6,7 +6,7 @@ function open_modal() {
     if(count_modal%2==0){
         count_modal++
         
-        footer.style.background = 'rgba(0, 42, 255, 0.20)'
+        footer.style.background = 'rgba(0, 42, 255, 0.23)'
         btn.innerHTML = 'Close'
 
         document.querySelector('.modal-bg').style.display = 'block'
@@ -191,7 +191,7 @@ function edit_modal(count) {
     let title = document.querySelector('.modal-title-edit').innerHTML = count+1 + ' Approach'
     btn.innerHTML = 'Close'
     btn.setAttribute('onclick', 'close_editModal()')
-    footer.style.background = 'rgba(0, 42, 255, 0.20)'
+    footer.style.background = 'rgba(0, 42, 255, 0.23)'
     document.querySelector('.input').setAttribute('placeholder', arr[count])
     // Send var
     var count = count
