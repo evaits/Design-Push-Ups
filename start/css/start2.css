@@ -75,6 +75,7 @@
 
 .context {
     display: flex;
+    width: 100%;
 }
 
 .drop-menu {

@@ -175,6 +175,7 @@ label span {
 /* Main */
 .main {
     overflow: auto;
+    height: 541px;
 }
 
 .lack {
@@ -362,7 +363,6 @@ label span {
     position: absolute;
     bottom: -16px;
     left: calc(50% - 31.5px);
-    /* 79 */
     text-align: center;
     padding: 20px 22px 20px 22px;
     background: linear-gradient(274.42deg, #92A3FD 0%, #9DCEFF 124.45%);

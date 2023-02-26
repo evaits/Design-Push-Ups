@@ -531,7 +531,7 @@ body {
 .agree {
     position: absolute;
     top: 400px;
-    left: 146px;
+    left: calc(50% - 31.5px);
     text-align: center;
     padding: 24px 25px 24px 25px;
     background: linear-gradient(274.42deg, #92A3FD 0%, #9DCEFF 124.45%);

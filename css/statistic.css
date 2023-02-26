@@ -266,20 +266,32 @@ label span {
 .navbar{
     position: fixed;
     display: flex;
+    justify-content: space-between;
     bottom: 0;
-    width: 100%;
+    width: 100vw;
+    height: 32px;
     background: #f8f8f8;
     box-shadow: 0px 10px 40px rgb(29 22 23 / 22%);
-    /* padding-top: 24px; */
     padding-top: 27px;
     padding-bottom: 27px;
-    padding-bottom: 28px;
-    padding-right: 30px;
-    padding-left: 30px;
+}
+
+.left-nav {
+    width: 13vh;
+    margin-left: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-nav {
+    width: 13vh;
+    margin-right: 30px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .home-link {
-    margin-right: 35px;
+    /* margin-right: 35px; */
     margin-top: 1px;
 }
 
@@ -294,14 +306,14 @@ label span {
 }
 
 .stat-ico {
-    width: 26px;
+    width: 28px;
     height: 35px;
 }
 
 .add {
     position: absolute;
     top: -29px;
-    left: 146px;
+    left: calc(50% - 31.5px);
     text-align: center;
     padding: 26px 27px 26px 27px;
     background: linear-gradient(274.42deg, #92A3FD 0%, #9DCEFF 124.45%);
@@ -315,7 +327,6 @@ label span {
 }
 
 .edit-link {
-    margin-left: 131px;
     height: 24px;
 }
 
@@ -377,7 +388,7 @@ label span {
 .agree {
     position: absolute;
     top: 490px;
-    left: 146px;
+    left: calc(50% - 31.5px);
     text-align: center;
     padding: 24px 25px 24px 25px;
     background: linear-gradient(274.42deg, #92A3FD 0%, #9DCEFF 124.45%);
