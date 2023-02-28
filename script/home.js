@@ -1,4 +1,4 @@
-        // Print data
+      // Print data
 if(localStorage.getItem("arr") == null){
   localStorage.setItem("arr", 0)
 }
@@ -29,7 +29,6 @@ if(user.sport == 'Squat'){
   icon.style.backgroundSize = '35px'
   icon.style.backgroundPosition = '40px'
 }
-
 
 // Print today statistic
 let push = document.querySelector('.repeat')
@@ -103,6 +102,7 @@ if(date.length > 0){
     // Add Class Name
     block.className = 'block'
     repeats_div.className = 'repeats'
+    repeats_p.className = 'lng-repeats'
     number_repeats.className = 'number-repeats'
     img.className = 'block-vector'
 
@@ -147,6 +147,11 @@ else{
   blocks.append(p)
 }
 
+// Get Language
+if(user.lang == undefined){
+  user.lang = 'en'
+}
+location.href = window.location.pathname + '#' + user.lang
 // Localisation
 let select = document.querySelector('#lang')
 const arrLeng = ['en', 'ua']
@@ -155,6 +160,9 @@ select.addEventListener('change', changeUrl)
 
 function changeUrl() {
   let lang = select.value
+  user.lang = lang
+  localStorage.setItem('user', JSON.stringify(user));
+  console.log(user)
   location.href = window.location.pathname + '#' + lang
   location.reload()
 }
@@ -163,12 +171,20 @@ function changeLang() {
   let hash = window.location.hash
   hash = hash.substring(1)
   if(!arrLeng.includes(hash)){
-    location.href = window.location.pathname + '#en'
+    location.href = window.location.pathname + '#' + user.lang
     location.reload() 
   }
   select.value = hash
-  for(let key in home){
-    document.querySelector('.lng-' + key).innerHTML = home[key][hash]
+  for(let key in homeLng){
+    if(key == 'repeats'){
+      const text = document.querySelectorAll('.lng-repeats')
+      for(let i = 0; i<text.length; i++){
+        text[i].innerHTML = homeLng[key][hash]
+      }
+    }
+    const text = document.querySelector('.lng-' + key)
+    if(text == null){continue}
+    text.innerHTML = homeLng[key][hash]
   }
 }
 

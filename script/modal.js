@@ -75,7 +75,7 @@ function save_data() {
   // Close modal and reload
   animateCloseModal()
   document.querySelector('.modal-bg').style.display = 'none'
-  location.href=location.href;
+  location.reload()
 }
 
 
@@ -111,3 +111,4 @@ if(localStorage_date !== today){
   localStorage.removeItem("arr")
   location = location
 }
+

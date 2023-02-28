@@ -55,9 +55,10 @@ if(date.length > 0){
     left_info.className = 'left-info'
     h6.className = 'date'
     repeats.className = 'repeats'
+    span.className = 'lng-repeats'
     right_info.className = 'right-info'
     dots.className = 'dots'
-    btn_delete.className = 'delete delete-'+i
+    btn_delete.className = 'delete lng-delete delete-'+i
     percent.className = 'percent'
 
     // Get date from Local Storage
@@ -80,7 +81,7 @@ if(date.length > 0){
     dots.setAttribute('onclick', 'open_delete('+ i +')')
 
     // Percent settings
-    localStorage.getItem(date_localStorage) >= Number(user.daily) ? percent.innerHTML = 'Done' : percent.innerHTML = 'Sick';
+    localStorage.getItem(date_localStorage) >= Number(user.daily) ? percent.innerHTML = 'Done' : percent.innerHTML = 'Nearly';
     
     
     // Add in site
@@ -114,7 +115,7 @@ function delete_fun() {
     if(delete_ask){
         let key = date[count]
         localStorage.removeItem(key)
-        location = location
+        location.reload()
     }
 }
 
@@ -129,4 +130,37 @@ $(document).ready(function () {
 		}
 	});
 });
+
+    // Localisation
+// Check lang
+if(user.lang == undefined){
+  user.lang = 'en'
+}
+
+// Change url
+location.href = window.location.pathname + '#' + user.lang
+
+const arrLeng = ['en', 'ua']
+
+function changeLang() {
+  let hash = window.location.hash
+  hash = hash.substring(1)
+  if(!arrLeng.includes(hash)){
+    location.href = window.location.pathname + '#en'
+    location.reload() 
+  }
+  user = hash
+  for(key in historyLng){
+    const text = document.querySelectorAll('.lng-' + key)
+    for(let i = 0; i<text.length; i++){
+      text[i].innerHTML = historyLng[key][hash]
+      if((key == 'delete') && (hash == 'ua')){
+        text[i].style.right = "-2px"
+      }
+    }
+  }
+  
+}
+
+changeLang()
 	

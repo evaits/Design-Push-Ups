@@ -19,7 +19,7 @@
     <div class="container">
         <header class="header">
             <a href="index.html"><img src="img/today-approaches/back.png" alt="back" class="back"></a>
-            <h3 class="title">
+            <h3 class="title lng-title">
                 Today
             </h3>
             <img src="img/today-approaches/dots.png" alt="dots" class="dots">
@@ -30,7 +30,7 @@
         </main>
     </div>
     <footer class="footer">
-        <div class="btn-new" onclick="open_modal()">
+        <div class="btn-new lng-btn" onclick="open_modal()">
             New
         </div>
     </footer>
@@ -40,7 +40,7 @@
             <div class="modal-bg">
                 <div class="modal">
                     <img src="img/modal-icon.png" alt="ico" class="modal-icon">
-                    <h3 class="modal-title">New approach</h3>
+                    <h3 class="modal-title lng-modalTitle">New approach</h3>
                         <!-- Select -->
                     
                     <details class="custom-select">
@@ -263,7 +263,14 @@
     <div class="modal-bg-edit">
         <div class="modal-edit">
             <img src="img/modal-icon.png" alt="ico" class="modal-icon">
-            <h3 class="modal-title-edit">3 Approach</h3>
+            <h3 class="modal-title-edit">
+                <span class="count">
+                    3
+                </span> 
+                <span class="lng-modalTitleEdit">
+                    Approach
+                </span>
+            </h3>
             
             <input type="number" name="inp" class="input" min="1">
 
@@ -277,6 +284,7 @@
             </div>
         </div>
     </div>
+    <script src="script/localisation.js"></script>
     <script src="script/today-edit.js"></script>
 </body>
 </html>
