@@ -1,3 +1,10 @@
+const modalLng = {
+    "modalTitle": {
+        "en": " New approach",
+        "ua": " Новий підхід"
+    },
+}
+
 const homeLng = {
     "sub-title":  {
         "en": "Welcome back",
@@ -34,11 +41,7 @@ const homeLng = {
     "repeats": {
         "en": "Repeats",
         "ua": "Повторів"
-    },
-    "modalTitle": {
-        "en": " New approach",
-        "ua": " Новий підхід"
-    },
+    }
 }
 
 const todayLng = {

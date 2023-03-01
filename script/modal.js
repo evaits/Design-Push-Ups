@@ -84,7 +84,18 @@ let today = new Date()
 
 today = Date.parse(today)
 today = new Date(today).toLocaleString('en-US')
-today = today.slice(0, 9)
+
+// Check date
+let checkDate = new Date(today).getDate()
+if(Number(checkDate) < 10){
+  today = today.slice(0, 8)
+  sessionStorage.setItem('todayLength', 1)
+}
+else{
+  today = today.slice(0, 9)
+  sessionStorage.setItem('todayLength', 0)
+}
+
 if(localStorage.getItem("today") == null){
   localStorage.setItem("today", today)
 }
@@ -102,13 +113,22 @@ if (localStorage.getItem('arr')){
 }
 
 
-
+// Push data
 let localStorage_date = localStorage.getItem('today')
 if(localStorage_date !== today){
   localStorage.setItem(localStorage_date, sum1)
   localStorage.setItem("today", today)
   
   localStorage.removeItem("arr")
-  location = location
+  location.reload()
 }
 
+
+// Localisation
+function changeLang() {
+  let hash = JSON.parse(localStorage.getItem('user')).lang
+  const text = document.querySelector('.lng-modalTitle')
+  text.innerHTML = modalLng['modalTitle'][hash]
+}
+
+changeLang()

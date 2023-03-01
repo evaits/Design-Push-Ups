@@ -76,7 +76,6 @@ for(let i = 0; i<ms.length; i++){
 }
 
 
-
         // Print Activity Progress
 if(date.length > 0){
   let blocks = document.querySelector('.activity-blocks')
@@ -108,6 +107,8 @@ if(date.length > 0){
 
     // Get date from Local Storage
     date_localStorage = date[i]
+    let checkDate = sessionStorage.getItem('todayLength')
+    console.log(checkDate)
 
     // Reform date
     reform_date = date_localStorage.slice(0,4)
