@@ -198,6 +198,9 @@ if(user.lang == undefined){
         if((key == 'delete') && (hash == 'ua')){
           text[i].style.right = "-2px"
         }
+        if(hash == 'ua'){
+          text[i].style.fontFamily = '"Roboto Mono", monospace'
+        }
       }
     }
     

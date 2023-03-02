@@ -40,8 +40,10 @@ push.innerHTML = sum
 
 arr[0] == 0 ? pod.innerHTML = 0 : pod.innerHTML = arr.length
 
+
 let average = document.querySelector('.average')
-average.innerHTML = Math.round(sum/arr.length) + '/ap'
+user.lang == 'en' ? ap = '/ap' : ap = '/п'
+average.innerHTML = Math.round(sum/arr.length) + ap
 
 
 
@@ -183,11 +185,15 @@ function changeLang() {
       const text = document.querySelectorAll('.lng-repeats')
       for(let i = 0; i<text.length; i++){
         text[i].innerHTML = homeLng[key][hash]
+        text[i].style.fontFamily = '"Roboto Mono", monospace'
       }
     }
     const text = document.querySelector('.lng-' + key)
     if(text == null){continue}
     text.innerHTML = homeLng[key][hash]
+    if(hash == 'ua'){
+      text.style.fontFamily = '"Roboto Mono", monospace'
+    }
   }
 }
 

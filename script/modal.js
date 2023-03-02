@@ -89,6 +89,9 @@ today = new Date(today).toLocaleString('en-US')
 let checkDate = new Date(today).getDate()
 if(Number(checkDate) < 10){
   today = today.slice(0, 8)
+  today = today.split('')
+  today.splice(2,0,'0')
+  today = today.join('')
 }
 else{
   today = today.slice(0, 9)

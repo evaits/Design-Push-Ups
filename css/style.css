@@ -218,8 +218,8 @@ body {
 .stat {
     display: flex;
     justify-content: center;
-    padding-left: 27px;
-    padding-right: 27px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .repeats-block,

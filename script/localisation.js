@@ -91,6 +91,10 @@ const historyLng = {
 
 const statLng = {
     "title": {
+        "en": "Workout Tracker",
+        "ua": "Трекер Тренування"
+    },
+    "titleBlocks": {
         "en": "Your Achievements",
         "ua": "Твої досягнення"
     },
@@ -98,12 +102,20 @@ const statLng = {
         "en": "Your training continues",
         "ua": "Ти тренуєшся на протязі"
     },
+    "titleBest": {
+        "en": "Your best result",
+        "ua": "Твій найкращий результат"
+    },
     "motivation1": {
         "en": "You can do everything",
         "ua": "Ти можеш усе"
     },
     "motivation2": {
-        "en": "You can do everything",
-        "ua": "Ти можеш усе"
+        "en": "Mountains don't bother you",
+        "ua": "Гори не спинять тебе"
+    },
+    "motivation3": {
+        "en": "This is your goal",
+        "ua": "Це твоя ціль"
     },
 }
