@@ -63,6 +63,11 @@ if(date.length > 0){
 
     // Get date from Local Storage
     date_localStorage = date[i]
+    if(date_localStorage.length == 8){
+      date_localStorage = date_localStorage.split('')
+      date_localStorage.splice(2,0,'0')
+      date_localStorage = date_localStorage.join('')
+    }
 
     // Reform date
     reform_date = date_localStorage.slice(0,4)

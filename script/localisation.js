@@ -88,3 +88,22 @@ const historyLng = {
         "ua": "Видалити"
     }
 }
+
+const statLng = {
+    "title": {
+        "en": "Your Achievements",
+        "ua": "Твої досягнення"
+    },
+    "titleDays": {
+        "en": "Your training continues",
+        "ua": "Ти тренуєшся на протязі"
+    },
+    "motivation1": {
+        "en": "You can do everything",
+        "ua": "Ти можеш усе"
+    },
+    "motivation2": {
+        "en": "You can do everything",
+        "ua": "Ти можеш усе"
+    },
+}

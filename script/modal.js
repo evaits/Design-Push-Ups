@@ -89,11 +89,9 @@ today = new Date(today).toLocaleString('en-US')
 let checkDate = new Date(today).getDate()
 if(Number(checkDate) < 10){
   today = today.slice(0, 8)
-  sessionStorage.setItem('todayLength', 1)
 }
 else{
   today = today.slice(0, 9)
-  sessionStorage.setItem('todayLength', 0)
 }
 
 if(localStorage.getItem("today") == null){

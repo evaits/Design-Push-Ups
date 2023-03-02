@@ -60,39 +60,6 @@ function save_data() {
 }
 
 
-// Save Date
-let today = new Date()
-
-today = Date.parse(today)
-today = new Date(today).toLocaleString('en-US')
-today = today.slice(0, 9)
-if(localStorage.getItem("today") == null){
-  localStorage.setItem("today", today)
-}
-
-let sum1 = 0
-if (localStorage.getItem('arr')){ 
-  
-  let arr1 = []
-  arr1 = localStorage.getItem("arr")
-  arr1 = arr1.split(',')
-  for(let i = 0; i<arr1.length; i++){
-    arr1[i] = Number(arr1[i])
-  }
-  arr1.map((item) => sum1 += item);
-}
-
-
-
-let localStorage_date = localStorage.getItem('today')
-if(localStorage_date !== today){
-  localStorage.setItem(localStorage_date, sum1)
-  localStorage.setItem("today", today)
-  
-  localStorage.removeItem("arr")
-  location.reload()
-}
-
         // Print Data
 
 // Get arr

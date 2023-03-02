@@ -75,7 +75,6 @@ for(let i = 0; i<ms.length; i++){
   date.push(Intl.DateTimeFormat('en-US').format(ms[i]))
 }
 
-
         // Print Activity Progress
 if(date.length > 0){
   let blocks = document.querySelector('.activity-blocks')
@@ -107,13 +106,16 @@ if(date.length > 0){
 
     // Get date from Local Storage
     date_localStorage = date[i]
-    let checkDate = sessionStorage.getItem('todayLength')
-    console.log(checkDate)
-
+    if(date_localStorage.length == 8){
+      date_localStorage = date_localStorage.split('')
+      date_localStorage.splice(2,0,'0')
+      date_localStorage = date_localStorage.join('')
+    }
     // Reform date
     reform_date = date_localStorage.slice(0,4)
     reform_date = reform_date.replace('/', '.')
     if(reform_date.length == 4){
+      
       reform_date = '0' + reform_date
     }
     reform_date = reform_date[3]+reform_date[4] + reform_date[2] + reform_date[0] + reform_date[1]
