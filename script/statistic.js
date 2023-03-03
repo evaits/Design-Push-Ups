@@ -199,8 +199,14 @@ if(user.lang == undefined){
               if((key == 'delete') && (hash == 'ua')){
                 text[i].style.right = "-2px"
               }
+              if((key == 'motivation1') || (key == 'motivation3')){
+                text[i].style.fontSize = '12px'
+              }
               if(key == 'titleDays'){
-                text[i].style.fontSize = '12.3px'
+                text[i].style.fontSize = '11px'
+              }
+              if(key == 'titleBest'){
+                text[i].style.fontSize = '10.4px'
               }
               text[i].style.fontFamily = '"Roboto Mono", monospace'
           }
@@ -211,3 +217,10 @@ if(user.lang == undefined){
   }
   
   changeLang()
+
+  // Test
+  function a() {
+    alert('Set item')
+    localStorage.setItem('3/3/2023', 20)
+    localStorage.setItem('3/2/2023', 40)
+  }
