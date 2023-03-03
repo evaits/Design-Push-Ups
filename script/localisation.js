@@ -10,10 +10,6 @@ const homeLng = {
         "en": "Welcome back",
         "ua": "З Поверненням"
     },
-    "title": {
-        "en": "Push-Ups",
-        "ua": "Віджимання"
-    },
     "stat-title": {
         "en": "Today",
         "ua": "Сьогодні"

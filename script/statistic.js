@@ -196,9 +196,6 @@ if(user.lang == undefined){
             const text = document.querySelectorAll('.lng-' + key)
             for(let i = 0; i<text.length; i++){
               text[i].innerHTML = statLng[key][hash]
-              if((key == 'delete') && (hash == 'ua')){
-                text[i].style.right = "-2px"
-              }
               if((key == 'motivation1') || (key == 'motivation3')){
                 text[i].style.fontSize = '12px'
               }
@@ -221,6 +218,7 @@ if(user.lang == undefined){
   // Test
   function a() {
     alert('Set item')
-    localStorage.setItem('3/3/2023', 20)
+    localStorage.setItem('3/1/2023', 20)
     localStorage.setItem('3/2/2023', 40)
+    location.reload()
   }

@@ -139,7 +139,7 @@ function edit(name){
         let squat = document.createElement('div')
 
         // Add Atributs
-        block.className = 'block gender block_' + name
+        block.className = 'block sport block_' + name
         context.className = 'context'
         context.setAttribute('onclick', ('open_dropMenuSport()'))
         img.className = 'img'
@@ -247,8 +247,8 @@ function toProfile() {
         // Open Drop Menu SPort
 let count_menuSport = 0
 function open_dropMenuSport() {
-    if(count_menuSport == 0){
-        count_menuSport = 1
+    if(count_menuSport%2==0){
+        count_menuSport++
         let drop_menu = document.querySelector('.drop-menu-sport')
         drop_menu.style.display = 'block'
         animateOpenMenuSport()
@@ -353,7 +353,7 @@ $(document).ready(function () {
             count_menu = 0
 		}
         }
-        if(count_menuSport == 0){
+        if(count_menuSport%2 != 0){
             var drop_menu = $('.drop-menu-sport')
             var div = $( ".sport" ); // тут указываем ID элемента
             if ( !div.is(e.target) // если клик был не по нашему блоку
@@ -361,6 +361,7 @@ $(document).ready(function () {
 			drop_menu.hide(); // скрываем его
             animateCloseMenuSport()
             count_menuSport = 0
+            
 		}
         }
 	});

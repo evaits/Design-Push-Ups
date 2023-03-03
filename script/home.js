@@ -196,8 +196,7 @@ function changeLang() {
       }
       const text = document.querySelector('.lng-' + key)
       if(text == null){continue}
-      text.innerHTML = homeLng[key][hash]
-      
+        text.innerHTML = homeLng[key][hash]
         text.style.fontFamily = '"Roboto Mono", monospace'
       }
   }

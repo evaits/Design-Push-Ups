@@ -89,9 +89,25 @@ if(date.length > 0){
     dots.setAttribute('onclick', 'open_delete('+ i +')')
 
     // Percent settings
-    localStorage.getItem(date_localStorage) >= Number(user.daily) ? percent.innerHTML = 'Done' : percent.innerHTML = 'Nearly';
+    timeVar = localStorage.getItem(date_localStorage) 
+    if((timeVar >= Number(user.daily)) && user.lang == 'en'){
+      percent.innerHTML = 'Done'
+    }
+    else if((timeVar <= Number(user.daily) && user.lang == 'en')){
+      percent.innerHTML = 'Nearly'
+    }
+    if((timeVar >= Number(user.daily)) && user.lang == 'ua'){
+      percent.innerHTML = 'Добре'
+      percent.style.fontFamily = '"Roboto Mono", monospace'
+      percent.style.fontWeight = '400'
+    }
+    else if((timeVar <= Number(user.daily) && user.lang == 'ua')){
+      percent.innerHTML = 'Зле'
+      percent.style.fontFamily = '"Roboto Mono", monospace'
+      percent.style.fontWeight = '400'
+    }
     
-    
+    delete timeVar
     // Add in site
     blocks.append(block);
     block.append(left_info)
@@ -163,8 +179,9 @@ function changeLang() {
     for(let i = 0; i<text.length; i++){
       text[i].innerHTML = historyLng[key][hash]
       if((key == 'delete') && (hash == 'ua')){
-        text[i].style.right = "-2px"
+        text[i].style.right = "-3px"
       }
+      text[i].style.fontFamily = '"Roboto Mono", monospace'
     }
   }
   
