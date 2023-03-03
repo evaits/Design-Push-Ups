@@ -191,18 +191,19 @@ if(user.lang == undefined){
       location.reload() 
     }
     user = hash
-    for(key in statLng){
-      const text = document.querySelectorAll('.lng-' + key)
-      for(let i = 0; i<text.length; i++){
-        text[i].innerHTML = statLng[key][hash]
-        if((key == 'delete') && (hash == 'ua')){
-          text[i].style.right = "-2px"
-        }
-        if(hash == 'ua'){
-          text[i].style.fontFamily = '"Roboto Mono", monospace'
+     if(hash == 'ua'){
+          for(key in statLng){
+            const text = document.querySelectorAll('.lng-' + key)
+            for(let i = 0; i<text.length; i++){
+              text[i].innerHTML = statLng[key][hash]
+              if((key == 'delete') && (hash == 'ua')){
+                text[i].style.right = "-2px"
+              }
+              text[i].style.fontFamily = '"Roboto Mono", monospace'
+          }
         }
       }
-    }
+    
     
   }
   

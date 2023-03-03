@@ -109,10 +109,15 @@ if(date.length > 0){
     // Get date from Local Storage
     date_localStorage = date[i]
     if(date_localStorage.length == 8){
+      number_repeats.innerHTML = localStorage.getItem(date_localStorage)
       date_localStorage = date_localStorage.split('')
       date_localStorage.splice(2,0,'0')
       date_localStorage = date_localStorage.join('')
     }
+    else {
+      number_repeats.innerHTML = localStorage.getItem(date_localStorage)
+    }
+    
     // Reform date
     reform_date = date_localStorage.slice(0,4)
     reform_date = reform_date.replace('/', '.')
@@ -124,7 +129,7 @@ if(date.length > 0){
 
     // Add context
     date_html.innerHTML = reform_date
-    number_repeats.innerHTML = localStorage.getItem(date_localStorage)
+    
     repeats_p.innerHTML = 'repeats'
     img.setAttribute('src', 'img/Home/activity-img.png')
 
@@ -180,20 +185,21 @@ function changeLang() {
     location.reload() 
   }
   select.value = hash
-  for(let key in homeLng){
-    if(key == 'repeats'){
-      const text = document.querySelectorAll('.lng-repeats')
-      for(let i = 0; i<text.length; i++){
-        text[i].innerHTML = homeLng[key][hash]
-        text[i].style.fontFamily = '"Roboto Mono", monospace'
+  if(hash == 'ua'){
+    for(let key in homeLng){
+      if(key == 'repeats'){
+        const text = document.querySelectorAll('.lng-repeats')
+        for(let i = 0; i<text.length; i++){
+          text[i].innerHTML = homeLng[key][hash]
+          text[i].style.fontFamily = '"Roboto Mono", monospace'
+        }
       }
-    }
-    const text = document.querySelector('.lng-' + key)
-    if(text == null){continue}
-    text.innerHTML = homeLng[key][hash]
-    if(hash == 'ua'){
-      text.style.fontFamily = '"Roboto Mono", monospace'
-    }
+      const text = document.querySelector('.lng-' + key)
+      if(text == null){continue}
+      text.innerHTML = homeLng[key][hash]
+      
+        text.style.fontFamily = '"Roboto Mono", monospace'
+      }
   }
 }
 
