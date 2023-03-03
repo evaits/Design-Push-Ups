@@ -64,9 +64,13 @@ if(date.length > 0){
     // Get date from Local Storage
     date_localStorage = date[i]
     if(date_localStorage.length == 8){
+      repeats.innerHTML = localStorage.getItem(date_localStorage);
       date_localStorage = date_localStorage.split('')
       date_localStorage.splice(2,0,'0')
       date_localStorage = date_localStorage.join('')
+    }
+    else{
+      repeats.innerHTML = localStorage.getItem(date_localStorage);
     }
 
     // Reform date
@@ -79,7 +83,6 @@ if(date.length > 0){
 
     // Add context
     h6.innerHTML = reform_date;
-    repeats.innerHTML = localStorage.getItem(date_localStorage);
     span.innerHTML = 'REPEATS';
     dots.innerHTML = '...';
     btn_delete.innerHTML = 'Delete';
