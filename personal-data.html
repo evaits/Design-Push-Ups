@@ -19,7 +19,7 @@
     <div class="container">
         <header class="header">
             <a href="profile.html"><img src="img/today-approaches/back.png" alt="back" class="back"></a>
-            <h3 class="title">
+            <h3 class="title lng-title">
                 Personal Data
             </h3>
             <img src="img/today-approaches/dots.png" alt="dots" class="dots">
@@ -28,7 +28,7 @@
             <div class="block firstName" onclick="edit('firstName')">
                 <div class="left">
                     <img src="img/Start/profile.png" alt="firstName" class="img">
-                    <p class="placeholder placeholder_firstName">First Name</p>
+                    <p class="placeholder placeholder_firstName lng-first">First Name</p>
                 </div>    
                 <div class="right">
                     <p class="FirstName-data">Denys</p>
@@ -39,7 +39,7 @@
             <div class="block lastName" onclick="edit('lastName')">
                 <div class="left">
                     <img src="img/Start/profile.png" alt="lastName" class="img">
-                    <p class="placeholder placeholder_lastName">Last Name</p>
+                    <p class="placeholder placeholder_lastName lng-last">Last Name</p>
                 </div>    
                 <div class="right">
                     <p class="LastName-data">Shkaraban</p>
@@ -50,7 +50,7 @@
             <div class="block gender" onclick="edit('gender')">
                 <div class="left">
                     <img src="img/Start/gender.png" alt="Gender" class="img">
-                    <p class="placeholder placeholder_lastName">Gender</p>
+                    <p class="placeholder placeholder_lastName lng-gender">Gender</p>
                 </div>    
                 <div class="right">
                     <p class="gender-data">Male</p>
@@ -61,7 +61,7 @@
             <div class="block age" onclick="edit('age')">
                 <div class="left">
                     <img src="img/personal-data/age.png" alt="age" class="img">
-                    <p class="placeholder placeholder_age">Age</p>
+                    <p class="placeholder placeholder_age lng-age">Age</p>
                 </div>    
                 <div class="right">
                     <p class="age-data">17yo</p>
@@ -72,7 +72,7 @@
             <div class="block weight" onclick="edit('weight')">
                 <div class="left">
                     <img src="img/personal-data/weight.png" alt="weight" class="img">
-                    <p class="placeholder placeholder_weight">Weight</p>
+                    <p class="placeholder placeholder_weight lng-weight">Weight</p>
                 </div>    
                 <div class="right">
                     <p class="weight-data">73kg</p>
@@ -83,7 +83,7 @@
             <div class="block height" onclick="edit('height')">
                 <div class="left">
                     <img src="img/personal-data/height.png" alt="height" class="img">
-                    <p class="placeholder placeholder_height">Height</p>
+                    <p class="placeholder placeholder_height lng-height">Height</p>
                 </div>    
                 <div class="right">
                     <p class="height-data">183cm</p>
@@ -94,7 +94,7 @@
             <div class="block sport" onclick="edit('sport')">
                 <div class="left">
                     <img src="img/personal-data/sport.png" alt="sport" class="img">
-                    <p class="placeholder placeholder_sport">Type of Sport</p>
+                    <p class="placeholder placeholder_sport lng-sport">Type of Sport</p>
                 </div>    
                 <div class="right">
                     <p class="type-data">Push Up</p>
@@ -105,7 +105,7 @@
             <div class="block daily" onclick="edit('daily')">
                 <div class="left">
                     <img src="img/personal-data/daily.png" alt="daily" class="img">
-                    <p class="placeholder placeholder_daily">Daily</p>
+                    <p class="placeholder placeholder_daily lng-daily">Daily</p>
                 </div>    
                 <div class="right">
                     <p class="repeats">100 Repeats</p>
@@ -116,13 +116,14 @@
         </main>
     </div>
     <footer class="footer">
-        <div class="btn" onclick="toProfile()">
+        <div class="btn lng-toProfile" onclick="toProfile()">
             To Profile
         </div>
     </footer>
 
     
     <script src="script/jquery-3.6.3.min.js"></script>
+    <script src="script/localisation.js"></script>
     <script src="script/personal-data.js"></script>
 </body>
 </html>

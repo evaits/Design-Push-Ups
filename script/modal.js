@@ -130,6 +130,7 @@ function changeLang() {
   let hash = JSON.parse(localStorage.getItem('user')).lang
   const text = document.querySelector('.lng-modalTitle')
   text.innerHTML = modalLng['modalTitle'][hash]
+  text.style.fontFamily = '"Roboto Mono",monospace';
 }
 
 changeLang()
