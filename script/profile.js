@@ -25,15 +25,6 @@ function goBack() {
     window.history.back();
 }
 
-// Delete Data Base
-function delete_db() {
-    let ask = confirm('Are you sure?');
-    if (ask == true) {
-        localStorage.clear();
-        alert('Data Base is clear');
-    }
-}
-
 //Localization
 // Change url
 location.href = window.location.pathname + '#' + user.lang;
