@@ -136,6 +136,7 @@ label span {
         /* Body */
 
 body {
+    width: calc(100vw+200px);
     font-family: 'Poppins', sans-serif;
 }
 
@@ -190,7 +191,7 @@ body {
 
 .blocks {
     overflow: auto;
-    height: 478px;
+    height: calc(100vh - 270px);
     border-radius: 20px;
 }
 
@@ -398,7 +399,7 @@ body {
 .agree {
     position: absolute;
     top: 400px;
-    left: calc(50% - 31.5px);
+    left: calc(50% - 34px);
     text-align: center;
     padding: 24px 25px 24px 25px;
     background: linear-gradient(274.42deg, #92A3FD 0%, #9DCEFF 124.45%);
@@ -409,4 +410,15 @@ body {
 .agree-icon {
     width: 21px;
     height: 21px;
+}
+
+@media (max-height: 700px) {
+    .modal {
+        margin-top: 50px;
+    }
+    .agree {
+        position: absolute;
+        top: 340px;
+    }
+    
 }

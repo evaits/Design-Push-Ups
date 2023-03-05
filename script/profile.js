@@ -1,23 +1,23 @@
 // Get user
-let user = localStorage.getItem("user");
+let user = localStorage.getItem('user');
 user = JSON.parse(user);
 
 // Print Data
-document.querySelector(".name").innerHTML =
-    user.firstName + " " + user.lastName;
+document.querySelector('.name').innerHTML =
+    user.firstName + ' ' + user.lastName;
 
-document.querySelector(".height").innerHTML = user.height + "cm";
+document.querySelector('.height').innerHTML = user.height + 'cm';
 
-document.querySelector(".weight").innerHTML = user.weight + "kg";
+document.querySelector('.weight').innerHTML = user.weight + 'kg';
 
-document.querySelector(".age").innerHTML = user.age + "yo";
+document.querySelector('.age').innerHTML = user.age + 'yo';
 
-let avatar = document.querySelector(".avatar");
+let avatar = document.querySelector('.avatar');
 
-if (user.gender == "Female") {
-    avatar.setAttribute("src", "img/profile/avatar-woman.png");
+if (user.gender == 'Female') {
+    avatar.setAttribute('src', 'img/profile/avatar-woman.png');
 } else {
-    avatar.setAttribute("src", "img/profile/avatar-boy.png");
+    avatar.setAttribute('src', 'img/profile/avatar-boy.png');
 }
 
 // Back
@@ -27,32 +27,32 @@ function goBack() {
 
 // Delete Data Base
 function delete_db() {
-    let ask = confirm("Are you sure?");
+    let ask = confirm('Are you sure?');
     if (ask == true) {
         localStorage.clear();
-        alert("Data Base is clear");
+        alert('Data Base is clear');
     }
 }
 
 //Localization
 // Change url
-location.href = window.location.pathname + "#" + user.lang;
+location.href = window.location.pathname + '#' + user.lang;
 
-const arrLeng = ["en", "ua"];
+const arrLeng = ['en', 'ua'];
 
 function changeLang() {
     let hash = window.location.hash;
     hash = hash.substring(1);
     if (!arrLeng.includes(hash)) {
-        location.href = window.location.pathname + "#en";
+        location.href = window.location.pathname + '#en';
         location.reload();
     }
     user = hash;
-    if (hash == "ua") {
+    if (hash == 'ua') {
         for (key in profileLng) {
-            const text = document.querySelectorAll(".lng-" + key);
+            const text = document.querySelectorAll('.lng-' + key);
             for (let i = 0; i < text.length; i++) {
-                text[i].innerHTML = profileLng[key]["ua"];
+                text[i].innerHTML = profileLng[key]['ua'];
                 text[i].style.fontFamily = '"Roboto Mono",monospace';
             }
         }

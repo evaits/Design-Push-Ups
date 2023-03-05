@@ -451,7 +451,7 @@ label span {
 .agree {
     position: absolute;
     top: 490px;
-    left: calc(50% - 31.5px);
+    left: calc(50% - 34px);
     text-align: center;
     padding: 24px 25px 24px 25px;
     background: linear-gradient(274.42deg, #92A3FD 0%, #9DCEFF 124.45%);
@@ -462,4 +462,19 @@ label span {
 .agree-icon {
     width: 21px;
     height: 21px;
+}
+
+@media (max-height: 710px) {
+    body {
+        height: calc(100vh + 40px);
+    }    
+}
+@media (max-height: 700px) {
+    .modal {
+        margin-top: 120px;
+    }
+    .agree {
+        position: absolute;
+        top: 410px;
+    }
 }

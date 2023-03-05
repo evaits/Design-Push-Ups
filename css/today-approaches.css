@@ -175,7 +175,7 @@ label span {
 /* Main */
 .main {
     overflow: auto;
-    height: 541px;
+    height: calc(100vh - 211px);
 }
 
 .lack {

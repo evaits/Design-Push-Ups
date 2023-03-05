@@ -136,7 +136,6 @@ label span {
 
 body {
     width: 100vw;
-    height: 100vh;
 }
             /* container */
 .container {
@@ -531,7 +530,7 @@ body {
 .agree {
     position: absolute;
     top: 400px;
-    left: calc(50% - 31.5px);
+    left: calc(50% - 34px);
     text-align: center;
     padding: 24px 25px 24px 25px;
     background: linear-gradient(274.42deg, #92A3FD 0%, #9DCEFF 124.45%);
@@ -549,4 +548,18 @@ body {
     .activity {
         padding-bottom: 90px;
     }
+    body {
+        height: calc(100vh + 20px);
+    }
+}
+
+@media (max-height: 700px) {
+    .modal {
+        margin-top: 50px;
+    }
+    .agree {
+        position: absolute;
+        top: 340px;
+    }
+    
 }
