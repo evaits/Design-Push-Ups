@@ -219,6 +219,14 @@ body {
 	line-height: 30px;
 }
 
+.lack {
+    text-align: center;
+    margin-top: 80px;
+    font-weight: 200;
+    font-size: 25px;
+    color: rgb(114, 114, 255);
+}
+
 .repeats {
 	font-family: 'Poppins';
 	font-weight: 400;

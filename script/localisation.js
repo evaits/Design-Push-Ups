@@ -193,3 +193,21 @@ const personalLng = {
         ua: 'До Профілю'
     }
 };
+
+const settingsLng = {
+    title: {
+        ua: 'Налаштування'
+    },
+    lang: {
+        ua: 'Мова Додатку'
+    },
+    editData: {
+        ua: 'Редагувати Дані'
+    },
+    dellStat: {
+        ua: 'Видалити Статистику'
+    },
+    dellAcc: {
+        ua: 'Видалити Користувача'
+    },
+}

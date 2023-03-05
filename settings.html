@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style-reset.css">
+    <link rel="stylesheet" href="css/settings.css">
+
+    <link rel="shortcut icon" href="img/header-ico.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Push Up</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="profile.html"><img src="img/today-approaches/back.png" alt="back" class="back"></a>
+            <h3 class="title lng-title">
+                Settings
+            </h3>
+            <img src="img/today-approaches/dots.png" alt="dots" class="dots">
+        </header>
+
+        <main class="main">
+
+            <div class="block language">
+                <div class="context" onclick="open_dropMenu()">
+                    <div class="left">
+                        <img src="img/settings/lang.png" alt="language" class="img">
+
+                        <p class="placeholder lng-lang">Language</p>
+                    </div>    
+                    <div class="right">
+                        <p class="lang-data">English</p>
+                        <img src="img/Start/arrow.png" alt="arrow" class="arrow">
+                    </div>
+                </div>
+                <div class="drop-menu">
+                    <div class="push" onclick="addInput('en')">English</div>
+                    <hr>
+                    <div class="squat" onclick="addInput('ua')">Ukrainian</div>
+                </div>
+            </div>
+
+            <a href="personal-data.html" class="block edit-data">
+                <div class="left">
+                    <img src="img/settings/prof-edit.png" alt="profile" class="img">
+                    <p class="placeholder lng-editData">Edit Personal Data</p>
+                </div>    
+                <img src="img/Start/arrow.png" alt="arrow" class="arrow">
+            </a>
+
+            <div class="block dell-stat" onclick="dell_stat()">
+                <div class="left">
+                    <img src="img/settings/stat-dell.png" alt="statistics" class="img">
+                    <p class="placeholder lng-dellStat">Delete Statistics</p>
+                </div>    
+                <img src="img/Start/arrow.png" alt="arrow" class="arrow">
+            </div>
+
+            <div class="block dell-acc" onclick="dell_acc()">
+                <div class="left">
+                    <img src="img/settings/acc-dell.png" alt="profile" class="img">
+                    <p class="placeholder lng-dellAcc">Delete Account</p>
+                </div>    
+                <img src="img/Start/arrow.png" alt="arrow" class="arrow">
+            </div>
+            
+        </main>
+    </div>
+    <script src="script/jquery-3.6.3.min.js"></script>
+    <script src="script/localisation.js"></script>
+    <script src="script/settings.js"></script>
+</body>
+</html>

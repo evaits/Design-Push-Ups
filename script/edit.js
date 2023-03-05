@@ -123,6 +123,20 @@ if(date.length > 0){
   }
 
 }
+else {
+    let blocks = document.querySelector(".blocks");
+
+    let p = document.createElement("p");
+    p.className = "lack";
+    if(user.lang == 'en'){
+      p.innerHTML = "It's your first day" 
+    }
+    else {
+      p.innerHTML = "Це твій перший день";
+      p.style.fontFamily = '"Roboto Mono", monospace'
+    }
+    blocks.append(p);
+}
 
 // Delete
 function open_delete(count) {

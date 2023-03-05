@@ -149,7 +149,13 @@ else {
 
     let p = document.createElement("p");
     p.className = "lack";
-    p.innerHTML = "It's your first day";
+    if(user.lang == 'en'){
+      p.innerHTML = "It's your first day" 
+    }
+    else {
+      p.innerHTML = "Це твій перший день";
+      p.style.fontFamily = '"Roboto Mono", monospace'
+    }
 
     blocks.append(p);
 }
@@ -157,22 +163,12 @@ else {
 // Get Language
 if (user.lang == undefined) {
     user.lang = "en";
+    localStorage.setItem('user', JSON.stringify(user))
 }
 location.href = window.location.pathname + "#" + user.lang;
+
 // Localisation
-let select = document.querySelector("#lang");
 const arrLeng = ["en", "ua"];
-
-select.addEventListener("change", changeUrl);
-
-function changeUrl() {
-    let lang = select.value;
-    user.lang = lang;
-    localStorage.setItem("user", JSON.stringify(user));
-    console.log(user);
-    location.href = window.location.pathname + "#" + lang;
-    location.reload();
-}
 
 function changeLang() {
     let hash = window.location.hash;
@@ -181,7 +177,6 @@ function changeLang() {
         location.href = window.location.pathname + "#" + user.lang;
         location.reload();
     }
-    select.value = hash;
     if (hash == "ua") {
         for (let key in homeLng) {
             if (key == "repeats") {

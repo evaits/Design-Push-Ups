@@ -374,6 +374,7 @@ $(document).ready(function () {
 });
 
 //Localization
+
 // Change url
 location.href = window.location.pathname + '#' + user.lang;
 
@@ -399,3 +400,8 @@ function changeLang() {
 }
 
 changeLang();
+
+// Back
+function goBack() {
+    window.history.back();
+}

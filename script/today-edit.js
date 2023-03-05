@@ -170,8 +170,14 @@ else{
     
     // Import user
     let user = JSON.parse(localStorage.getItem('user'))
-    user.lang == 'en' ? p.innerHTML = "No more approach today." : p.innerHTML = "Сьогодні ще ні одного підходу."
     
+    if(user.lang == 'en'){
+      p.innerHTML = "No more approach today." 
+    }
+    else {
+      p.innerHTML = "Сьогодні ще ні одного підходу.";
+      p.style.fontFamily = '"Roboto Mono", monospace'
+    }
     main.append(p)
 }
 
@@ -215,7 +221,7 @@ function delete_data() {
 // Save changes
 function save_changes() {
     let input = document.querySelector('.input').value
-    if (input == ''){
+    if ((input == '') || (Number(input) <= 0) || (Number(input) > 300)){
         alert('Error')
     } 
     else {
@@ -260,6 +266,7 @@ function changeLang() {
     if(text == null){continue}
     for(let i = 0; i<text.length; i++){
       text[i].innerHTML = todayLng[key][hash]
+      text[i].style.fontFamily = '"Roboto Mono", monospace'
     }
   }
 }
